@@ -5,7 +5,7 @@
 
 This repository contains and all of the code and data required to reproduce the figures presented in: *On the effect of mating complexity on gene drive dynamics*.
 
-The code included comes in two types:
+All the final figures are also included in the repository. The code included comes in two types:
 
 1. Code for running numerical simulations and generating data (written in a mixture of Matlab and Mathematica)
 2. Code for loading the numerical simulation data and plotting it to reproduce the figures as shown in the text (written in Matlab and Mathematica)
