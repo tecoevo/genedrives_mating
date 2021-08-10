@@ -1,0 +1,1 @@
+The Mathematica notebook "Invasion_conditions.nb" generates figures for section "Additional Method" where condition for invasion for Medea and Distortion gene drive are derived.
