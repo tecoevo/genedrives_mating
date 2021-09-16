@@ -1,4 +1,4 @@
-### This code is associated with the paper "On the effect of mating complexity on gene drive dynamics".
+### This code is associated with the paper "The effect of mating complexity on gene drive dynamics".
 
 
 ## Overview ##
