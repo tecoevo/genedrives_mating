@@ -23,6 +23,6 @@ For figures 3 and 6, once the data is generated (or downloaded from the reposito
 
 For figures 3 and 6, data corresponding to the figures in the manuscript can also be downloaded directly from the "data/" subdirectories here in the repository and plotted as described in the paragraph above without re-generating it via Matlab code in "code".
 
-## Contact information ##
+[comment]: <> ## Contact information ##
 
-* Prateek Verma, Email: prateek4d@gmail.com
+[comment]: <> * Prateek Verma, Email: prateek4d@gmail.com
