@@ -1,0 +1,1435 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     59680,       1427]
+NotebookOptionsPosition[     59254,       1411]
+NotebookOutlinePosition[     59591,       1426]
+CellTagsIndexPosition[     59548,       1423]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"Show", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"StreamDensityPlot", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"xdotcart", "[", 
+             RowBox[{
+             "xcart", ",", "ycart", ",", "ffww", ",", "ffwd", ",", "ffdd", 
+              ",", "p", ",", "d", ",", "\[Omega]", ",", "\[Nu]", ",", "e", 
+              ",", "g", ",", "h11", ",", "h12", ",", "h13", ",", "h22", ",", 
+              "h23", ",", "h33"}], "]"}], ",", 
+            RowBox[{"ydotcart", "[", 
+             RowBox[{
+             "xcart", ",", "ycart", ",", "ffww", ",", "ffwd", ",", "ffdd", 
+              ",", "p", ",", "d", ",", "\[Omega]", ",", "\[Nu]", ",", "e", 
+              ",", "g", ",", "h11", ",", "h12", ",", "h13", ",", "h22", ",", 
+              "h23", ",", "h33"}], "]"}]}], "}"}], ",", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"xcart", ",", "ycart"}], "}"}], "\[Element]", 
+           "\[ScriptCapitalD]"}], ",", 
+          RowBox[{"StreamStyle", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Arrowheads", "[", "0.025", "]"}], ",", 
+             RowBox[{"Darker", "[", "Gray", "]"}]}], "}"}]}], ",", " ", 
+          RowBox[{"StreamPoints", "\[Rule]", "Automatic"}], ",", 
+          RowBox[{"ColorFunction", "\[Rule]", "\"\<LightTemperatureMap\>\""}],
+           ",", 
+          RowBox[{"ColorFunctionScaling", "\[Rule]", "True"}], ",", 
+          RowBox[{"Mesh", "\[Rule]", "None"}], ",", 
+          RowBox[{"Frame", "\[Rule]", "None"}]}], "]"}], ",", "leftri", ",", 
+        "\[IndentingNewLine]", "rightri", ",", "\[IndentingNewLine]", "downl",
+         ",", "Tri", ",", "HWparabola1", ",", 
+        RowBox[{
+         RowBox[{"sol1", " ", "=", " ", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"xcart", ",", "ycart"}], "}"}], "/.", 
+           RowBox[{"Chop", "[", 
+            RowBox[{"Quiet", "[", 
+             RowBox[{"NSolve", "[", " ", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"xdotcart", "[", 
+                   RowBox[{
+                   "xcart", ",", "ycart", ",", "ffww", ",", "ffwd", ",", 
+                    "ffdd", ",", "p", ",", "d", ",", "\[Omega]", ",", "\[Nu]",
+                     ",", "e", ",", "g", ",", "h11", ",", "h12", ",", "h13", 
+                    ",", "h22", ",", "h23", ",", "h33"}], "]"}], "\[Equal]", 
+                  "0"}], ",", 
+                 RowBox[{
+                  RowBox[{"ydotcart", "[", 
+                   RowBox[{
+                   "xcart", ",", "ycart", ",", "ffww", ",", "ffwd", ",", 
+                    "ffdd", ",", "p", ",", "d", ",", "\[Omega]", ",", "\[Nu]",
+                     ",", "e", ",", "g", ",", "h11", ",", "h12", ",", "h13", 
+                    ",", "h22", ",", "h23", ",", "h33"}], "]"}], "\[Equal]", 
+                  "0"}], ",", 
+                 RowBox[{"xcart", "<", "0.999"}], ",", 
+                 RowBox[{"xcart", ">", "0.0001"}], ",", 
+                 RowBox[{"ycart", ">", "0.0001"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"xcart", ",", "ycart"}], "}"}]}], "]"}], "]"}], 
+            "]"}]}]}], ";", 
+         RowBox[{"ListPlot", "[", 
+          RowBox[{"sol1", ",", 
+           RowBox[{"PlotMarkers", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<OpenMarkers\>\"", ",", "10"}], "}"}]}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", "Black"}]}], "]"}]}]}], "}"}], ",",
+       "\[IndentingNewLine]", 
+      RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"ImageSize", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"400", ",", "400"}], "}"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Epilog", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Inset", "[", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<DD\>\"", ",", "18"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"1.", ",", 
+             RowBox[{"-", "0.05"}]}], "}"}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Inset", "[", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<WW\>\"", ",", "18"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", 
+             RowBox[{"-", "0.05"}]}], "}"}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Inset", "[", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<WD\>\"", ",", "18"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0.5", ",", "0.9"}], "}"}]}], "]"}]}], "}"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"BaseStyle", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"10", ",", 
+         RowBox[{"FontFamily", "\[Rule]", "\"\<Palatino-Roman\>\""}]}], 
+        "}"}]}]}], "]"}], ",", 
+    RowBox[{"Style", "[", 
+     RowBox[{"\"\<Non-Random mating\>\"", ",", "16", ",", "Bold"}], "]"}], 
+    ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"h11", ",", "1", ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+         "\"\<Mating rate of WW x WW, \!\(\*SubscriptBox[\(h\), \
+\(11\)]\)\>\"", ",", "11"}], "]"}]}], "}"}], ",", "0", ",", "1"}], "}"}], ",",
+     "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"h12", ",", "1", ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+         "\"\<Mating rate of WW x WD, \!\(\*SubscriptBox[\(h\), \
+\(12\)]\)\>\"", ",", "11"}], "]"}]}], "}"}], ",", "0", ",", "1"}], "}"}], ",",
+     "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"h13", ",", "1", ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+         "\"\<Mating rate of WW x DD, \!\(\*SubscriptBox[\(h\), \
+\(13\)]\)\>\"", ",", "11"}], "]"}]}], "}"}], ",", "0", ",", "1"}], "}"}], ",",
+     "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"h22", ",", "1", ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+         "\"\<Mating rate of WD x WD, \!\(\*SubscriptBox[\(h\), \
+\(22\)]\)\>\"", ",", "11"}], "]"}]}], "}"}], ",", "0", ",", "1"}], "}"}], ",",
+     "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"h23", ",", "1", ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+         "\"\<Mating rate of WD x DD, \!\(\*SubscriptBox[\(h\), \
+\(23\)]\)\>\"", ",", "11"}], "]"}]}], "}"}], ",", "0", ",", "1"}], "}"}], ",",
+     "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"h33", ",", "1", ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+         "\"\<Mating rate of DD x DD, \!\(\*SubscriptBox[\(h\), \
+\(33\)]\)\>\"", ",", "11"}], "]"}]}], "}"}], ",", "0", ",", "1"}], "}"}], ",",
+     "Delimiter", ",", "\[IndentingNewLine]", 
+    RowBox[{"Style", "[", 
+     RowBox[{"\"\<Fertility Selection\>\"", ",", "16", ",", "Bold"}], "]"}], 
+    ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"ffww", ",", "1", ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+         "\"\<Fertility of WW, \!\(\*SubscriptBox[\(f\), \(WW\)]\)\>\"", ",", 
+          "11"}], "]"}]}], "}"}], ",", "0", ",", "1"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"ffwd", ",", "1", ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+         "\"\<Fertility of WD, \!\(\*SubscriptBox[\(f\), \(WD\)]\)\>\"", ",", 
+          "11"}], "]"}]}], "}"}], ",", "0", ",", "1"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"ffdd", ",", "1", ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+         "\"\<Fertility of DD, \!\(\*SubscriptBox[\(f\), \(DD\)]\)\>\"", ",", 
+          "11"}], "]"}]}], "}"}], ",", "0", ",", "1"}], "}"}], ",", 
+    "Delimiter", ",", 
+    RowBox[{"Style", "[", 
+     RowBox[{"\"\<Distortion\>\"", ",", "16", ",", "Bold"}], "]"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"p", ",", "0.5", ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<Drive efficiency, p\>\"", ",", "11"}], "]"}]}], "}"}], 
+      ",", "0.5", ",", "1"}], "}"}], ",", "Delimiter", ",", 
+    RowBox[{"Style", "[", 
+     RowBox[{"\"\<Viability Selection\>\"", ",", "16", ",", "Bold"}], "]"}], 
+    ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"\[Omega]", ",", "1", ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<Viability of WD, \[Omega]\>\"", ",", "11"}], "]"}]}], 
+       "}"}], ",", "0", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"\[Nu]", ",", "1", ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<Viability of DD, \[Nu]\>\"", ",", "11"}], "]"}]}], 
+       "}"}], ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"OpenerView", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{
+        "\"\<Specific drive efficiencies\>\"", ",", "11", ",", "Bold"}], 
+        "]"}], ",", 
+       RowBox[{"Column", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Control", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"d", ",", "0", ",", 
+                RowBox[{"Style", "[", 
+                 RowBox[{
+                 "\"\<Medea, \!\(\*SubscriptBox[\(d\), \(m\)]\)\>\"", ",", 
+                  "11"}], "]"}]}], "}"}], ",", "0", ",", "1"}], "}"}], "]"}], 
+           ",", 
+           RowBox[{"Control", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"e", ",", "0", ",", 
+                RowBox[{"Style", "[", 
+                 RowBox[{
+                 "\"\<Semele, \!\(\*SubscriptBox[\(d\), \(s\)]\)\>\"", ",", 
+                  "11"}], "]"}]}], "}"}], ",", "0", ",", "1"}], "}"}], "]"}], 
+           ",", 
+           RowBox[{"Control", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"g", ",", "0", ",", 
+                RowBox[{"Style", "[", 
+                 RowBox[{
+                 "\"\<Inverse Medea, \!\(\*SubscriptBox[\(d\), \(im\)]\)\>\"",
+                   ",", "11"}], "]"}]}], "}"}], ",", "0", ",", "1"}], "}"}], 
+            "]"}]}], "}"}], ",", "Right"}], "]"}]}], "}"}], "]"}], ",", 
+    RowBox[{"Button", "[", 
+     RowBox[{"\"\<Reset\>\"", ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"ffww", "=", "1"}], ",", 
+        RowBox[{"ffwd", "=", "1"}], ",", 
+        RowBox[{"ffdd", "=", "1"}], ",", 
+        RowBox[{"p", "=", "0.5"}], ",", 
+        RowBox[{"d", "=", "0"}], ",", 
+        RowBox[{"\[Omega]", "=", "1"}], ",", 
+        RowBox[{"\[Nu]", "=", "1"}], ",", 
+        RowBox[{"e", "=", "0"}], ",", 
+        RowBox[{"g", "=", "0"}]}], "}"}], ",", 
+      RowBox[{"Background", "\[Rule]", 
+       RowBox[{"Lighter", "[", 
+        RowBox[{"Gray", ",", " ", "0.7"}], "]"}]}], ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<FramedPalette\>\""}]}], "]"}], 
+    ",", 
+    RowBox[{"Initialization", "\[RuleDelayed]", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Tri", "=", 
+        RowBox[{"Graphics", "[", 
+         RowBox[{"Line", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "0"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0.5", ",", 
+              FractionBox[
+               RowBox[{"\[Sqrt]", "3"}], "2"]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0"}], "}"}]}], "}"}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"leftri", "=", 
+        RowBox[{"Graphics", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"GrayLevel", "[", "1", "]"}], ",", 
+           RowBox[{"Polygon", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "0.08`"}], ",", 
+                RowBox[{"-", "0.04`"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "0.08`"}], ",", "0.95`"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0.5`", ",", "0.95`"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0.5", ",", 
+                FractionBox[
+                 RowBox[{"\[Sqrt]", "3"}], "2"]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "0"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "0.08`"}], ",", 
+                RowBox[{"-", "0.04`"}]}], "}"}]}], "}"}], "]"}]}], "}"}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"rightri", "=", 
+        RowBox[{"Graphics", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"GrayLevel", "[", "1", "]"}], ",", 
+           RowBox[{"Polygon", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"0.5`", ",", "0.95`"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1.095`", ",", "0.95`"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1.095`", ",", 
+                RowBox[{"-", "0.04`"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "0"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0.5", ",", 
+                FractionBox[
+                 RowBox[{"\[Sqrt]", "3"}], "2"]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0.5`", ",", "0.95`"}], "}"}]}], "}"}], "]"}]}], "}"}],
+          "]"}]}], ";", 
+       RowBox[{"downl", "=", 
+        RowBox[{"Graphics", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"GrayLevel", "[", "1", "]"}], ",", 
+           RowBox[{"Polygon", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "0.08`"}], ",", 
+                RowBox[{"-", "0.04`"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1.08`", ",", 
+                RowBox[{"-", "0.04`"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1.08`", ",", "0"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "0.04`"}], ",", "0"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "0.08`"}], ",", 
+                RowBox[{"-", "0.04`"}]}], "}"}]}], "}"}], "]"}]}], "}"}], 
+         "]"}]}], ";", "\n", 
+       RowBox[{
+        RowBox[{"xwd", "[", 
+         RowBox[{"xww_", ",", "xdd_"}], "]"}], " ", ":=", " ", 
+        RowBox[{"1", "-", "xww", "-", "xdd"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"fww", " ", "[", 
+         RowBox[{
+         "xww_", ",", "xdd_", ",", "ffww_", ",", "ffwd_", ",", "ffdd_", ",", 
+          "p_", ",", "d_", ",", "e_", ",", "h11_", ",", "h12_", ",", "h22_"}],
+          "]"}], ":=", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"h11", "*", "ffww", "*", "ffww", " ", "xww", " ", "xww"}], 
+          " ", "+", " ", 
+          RowBox[{"h12", "*", 
+           RowBox[{"(", 
+            RowBox[{"1", "-", "p"}], ")"}], 
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             RowBox[{"e", "/", "2"}]}], ")"}], "*", "ffww", "*", "ffwd", " ", 
+           "xww", " ", 
+           RowBox[{"xwd", "[", 
+            RowBox[{"xww", ",", "xdd"}], "]"}]}], " ", "+", 
+          RowBox[{"h12", "*", 
+           RowBox[{"(", 
+            RowBox[{"1", "-", "d"}], ")"}], 
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             RowBox[{"e", "/", "2"}]}], ")"}], 
+           RowBox[{"(", 
+            RowBox[{"1", "-", "p"}], ")"}], "*", "ffww", "*", "ffwd", " ", 
+           "xww", " ", 
+           RowBox[{"xwd", "[", 
+            RowBox[{"xww", ",", "xdd"}], "]"}]}], "+", " ", 
+          RowBox[{"h22", "*", 
+           RowBox[{"(", 
+            RowBox[{"1", "-", "d"}], ")"}], 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1", "-", "p"}], ")"}], "^", "2"}], " ", "*", "ffwd", 
+           "*", "ffwd", " ", 
+           RowBox[{"xwd", "[", 
+            RowBox[{"xww", ",", "xdd"}], "]"}], "*", " ", 
+           RowBox[{"xwd", "[", 
+            RowBox[{"xww", ",", "xdd"}], "]"}]}]}], ")"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"fdd", "[", 
+         RowBox[{
+         "xww_", ",", "xdd_", ",", "ffww_", ",", "ffwd_", ",", "ffdd_", ",", 
+          "p_", ",", "\[Nu]_", ",", "h22_", ",", "h23_", ",", "h33_"}], "]"}],
+         " ", ":=", " ", 
+        RowBox[{"\[Nu]", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"h33", "*", "ffdd", "*", "ffdd", " ", "xdd", " ", "xdd"}], 
+           "+", " ", 
+           RowBox[{
+           "2", " ", "h23", "*", "p", " ", "*", "ffdd", "*", "ffwd", " ", 
+            "xdd", " ", 
+            RowBox[{"xwd", "[", 
+             RowBox[{"xww", ",", "xdd"}], "]"}]}], "+", " ", 
+           RowBox[{"h22", "*", " ", 
+            RowBox[{"p", "^", "2"}], " ", "*", "ffwd", "*", "ffwd", " ", 
+            RowBox[{"xwd", "[", 
+             RowBox[{"xww", ",", "xdd"}], "]"}], "*", 
+            RowBox[{"xwd", "[", 
+             RowBox[{"xww", ",", "xdd"}], "]"}]}]}], ")"}]}]}], ";", " ", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"fwd", "[", 
+         RowBox[{
+         "xww_", ",", "xdd_", ",", "ffww_", ",", "ffwd_", ",", "ffdd_", ",", 
+          "p_", ",", "\[Omega]_", ",", "e_", ",", "g_", ",", "h12_", ",", 
+          "h13_", ",", "h22_", ",", "h23_"}], "]"}], " ", ":=", " ", 
+        RowBox[{"\[Omega]", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", "h22", "*", "p", " ", 
+            RowBox[{"(", 
+             RowBox[{"1", "-", "p"}], ")"}], "*", "ffwd", "*", "ffwd", " ", 
+            RowBox[{"xwd", "[", 
+             RowBox[{"xww", ",", "xdd"}], "]"}], "*", 
+            RowBox[{"xwd", "[", 
+             RowBox[{"xww", ",", "xdd"}], "]"}]}], "+", " ", 
+           RowBox[{"2", "h23", "*", 
+            RowBox[{"(", 
+             RowBox[{"1", "-", "p"}], ")"}], "*", "ffdd", "*", "ffwd", " ", 
+            "xdd", " ", 
+            RowBox[{"xwd", "[", 
+             RowBox[{"xww", ",", "xdd"}], "]"}]}], "+", 
+           RowBox[{"2", " ", "h12", "*", 
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"e", "/", "2"}]}], ")"}], 
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"g", "/", "2"}]}], ")"}], "*", " ", "p", " ", "ffww", 
+            "*", "ffwd", " ", "xww", " ", 
+            RowBox[{"xwd", "[", 
+             RowBox[{"xww", ",", "xdd"}], "]"}]}], "+", 
+           RowBox[{"h13", "*", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"2", "-", "e"}], ")"}], 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"2", "-", "g"}], ")"}], "/", "2"}]}], ")"}], "*", 
+            "ffdd", "*", "ffww", " ", "xdd", " ", "xww"}]}], ")"}]}]}], ";", 
+       " ", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"ftot", "[", 
+         RowBox[{
+         "xww_", ",", "xdd_", ",", "ffww_", ",", "ffwd_", ",", "ffdd_", ",", 
+          "p_", ",", "d_", ",", "\[Omega]_", ",", "\[Nu]_", ",", "e_", ",", 
+          "g_", ",", "h11_", ",", "h12_", ",", "h13_", ",", "h22_", ",", 
+          "h23_", ",", "h33_"}], "]"}], ":=", " ", 
+        RowBox[{
+         RowBox[{"fww", "[", 
+          RowBox[{
+          "xww", ",", "xdd", ",", "ffww", ",", "ffwd", ",", "ffdd", ",", "p", 
+           ",", "d", ",", "e", ",", "h11", ",", "h12", ",", "h22"}], "]"}], 
+         "+", 
+         RowBox[{"fwd", "[", 
+          RowBox[{
+          "xww", ",", "xdd", ",", "ffww", ",", "ffwd", ",", "ffdd", ",", "p", 
+           ",", "\[Omega]", ",", "e", ",", "g", ",", "h12", ",", "h13", ",", 
+           "h22", ",", "h23"}], "]"}], "+", 
+         RowBox[{"fdd", "[", 
+          RowBox[{
+          "xww", ",", "xdd", ",", "ffww", ",", "ffwd", ",", "ffdd", ",", "p", 
+           ",", "\[Nu]", ",", "h22", ",", "h23", ",", "h33"}], "]"}]}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"xdot", "[", 
+         RowBox[{
+         "xww_", ",", "xdd_", ",", "ffww_", ",", "ffwd_", ",", "ffdd_", ",", 
+          "p_", ",", "d_", ",", "\[Omega]_", ",", "\[Nu]_", ",", "e_", ",", 
+          "g_", ",", "h11_", ",", "h12_", ",", "h13_", ",", "h22_", ",", 
+          "h23_", ",", "h33_"}], "]"}], " ", ":=", " ", 
+        RowBox[{
+         RowBox[{"fww", "[", 
+          RowBox[{
+          "xww", ",", "xdd", ",", "ffww", ",", "ffwd", ",", "ffdd", ",", "p", 
+           ",", "d", ",", "e", ",", "h11", ",", "h12", ",", "h22"}], "]"}], 
+         "-", 
+         RowBox[{"xww", "*", 
+          RowBox[{"ftot", "[", 
+           RowBox[{
+           "xww", ",", "xdd", ",", "ffww", ",", "ffwd", ",", "ffdd", ",", "p",
+             ",", "d", ",", "\[Omega]", ",", "\[Nu]", ",", "e", ",", "g", ",",
+             "h11", ",", "h12", ",", "h13", ",", "h22", ",", "h23", ",", 
+            "h33"}], "]"}]}]}]}], ";", " ", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"ydot", "[", 
+         RowBox[{
+         "xww_", ",", "xdd_", ",", "ffww_", ",", "ffwd_", ",", "ffdd_", ",", 
+          "p_", ",", "d_", ",", "\[Omega]_", ",", "\[Nu]_", ",", "e_", ",", 
+          "g_", ",", "h11_", ",", "h12_", ",", "h13_", ",", "h22_", ",", 
+          "h23_", ",", "h33_"}], "]"}], " ", ":=", " ", 
+        RowBox[{
+         RowBox[{"fdd", "[", 
+          RowBox[{
+          "xww", ",", "xdd", ",", "ffww", ",", "ffwd", ",", "ffdd", ",", "p", 
+           ",", "\[Nu]", ",", "h22", ",", "h23", ",", "h33"}], "]"}], "-", 
+         RowBox[{"xdd", "*", 
+          RowBox[{"ftot", "[", 
+           RowBox[{
+           "xww", ",", "xdd", ",", "ffww", ",", "ffwd", ",", "ffdd", ",", "p",
+             ",", "d", ",", "\[Omega]", ",", "\[Nu]", ",", "e", ",", "g", ",",
+             "h11", ",", "h12", ",", "h13", ",", "h22", ",", "h23", ",", 
+            "h33"}], "]"}]}]}]}], ";", " ", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Coordinates", " ", "of", " ", "S3", " ", "triangle"}], " ", 
+        "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"x1", " ", "=", " ", "0"}], ";", " ", 
+       RowBox[{"y1", " ", "=", " ", "0"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"x3", " ", "=", " ", "0.5"}], ";", " ", 
+       RowBox[{"y3", " ", "=", " ", 
+        RowBox[{
+         RowBox[{"Sqrt", "[", "3", "]"}], "/", "2"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"x2", " ", "=", " ", "1"}], ";", " ", 
+       RowBox[{"y2", " ", "=", " ", "0"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "Transforamtion", " ", "from", " ", "barycentric", " ", "to", " ", 
+         "Cartesian"}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"xncart", "[", 
+         RowBox[{"x_", ",", "y_"}], "]"}], " ", ":=", " ", 
+        RowBox[{
+         RowBox[{"x1", " ", "x"}], "+", 
+         RowBox[{"x2", " ", "y"}], " ", "+", " ", 
+         RowBox[{"x3", " ", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", "x", "-", "y"}], ")"}]}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"yncart", "[", 
+         RowBox[{"x_", ",", "y_"}], "]"}], " ", ":=", " ", 
+        RowBox[{
+         RowBox[{"y1", " ", "x"}], "+", 
+         RowBox[{"y2", " ", "y"}], " ", "+", " ", 
+         RowBox[{"y3", " ", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", "x", "-", "y"}], ")"}]}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"lamda1", "[", 
+         RowBox[{"xcart_", ",", "ycart_"}], "]"}], ":=", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"y2", "-", "y3"}], ")"}], 
+            RowBox[{"(", 
+             RowBox[{"xcart", "-", "x3"}], ")"}]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"x3", "-", "x2"}], ")"}], 
+            RowBox[{"(", 
+             RowBox[{"ycart", "-", "y3"}], ")"}]}]}], ")"}], "/", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"y2", "-", "y3"}], ")"}], 
+            RowBox[{"(", 
+             RowBox[{"x1", "-", "x3"}], ")"}]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"x3", "-", "x2"}], ")"}], 
+            RowBox[{"(", 
+             RowBox[{"y1", "-", "y3"}], ")"}]}]}], ")"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"lamda2", "[", 
+         RowBox[{"xcart_", ",", "ycart_"}], "]"}], ":=", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"y3", "-", "y1"}], ")"}], "*", 
+            RowBox[{"(", 
+             RowBox[{"xcart", "-", "x3"}], ")"}]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"x1", "-", "x3"}], ")"}], 
+            RowBox[{"(", 
+             RowBox[{"ycart", "-", "y3"}], ")"}]}]}], ")"}], "/", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"y2", "-", "y3"}], ")"}], 
+            RowBox[{"(", 
+             RowBox[{"x1", "-", "x3"}], ")"}]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"x3", "-", "x2"}], ")"}], 
+            RowBox[{"(", 
+             RowBox[{"y1", "-", "y3"}], ")"}]}]}], ")"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"xdotcart", "[", 
+         RowBox[{
+         "xcart_", ",", "ycart_", ",", "ffww_", ",", "ffwd_", ",", "ffdd_", 
+          ",", "p_", ",", "d_", ",", "\[Omega]_", ",", "\[Nu]_", ",", "e_", 
+          ",", "g_", ",", "h11_", ",", "h12_", ",", "h13_", ",", "h22_", ",", 
+          "h23_", ",", "h33_"}], "]"}], ":=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"x1", "-", "x3"}], ")"}], "*", 
+          RowBox[{"xdot", "[", 
+           RowBox[{
+            RowBox[{"lamda1", "[", 
+             RowBox[{"xcart", ",", "ycart"}], "]"}], ",", 
+            RowBox[{"lamda2", "[", 
+             RowBox[{"xcart", ",", "ycart"}], "]"}], ",", "ffww", ",", "ffwd",
+             ",", "ffdd", ",", "p", ",", "d", ",", "\[Omega]", ",", "\[Nu]", 
+            ",", "e", ",", "g", ",", "h11", ",", "h12", ",", "h13", ",", 
+            "h22", ",", "h23", ",", "h33"}], "]"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"x2", "-", "x3"}], ")"}], "*", 
+          RowBox[{"ydot", "[", 
+           RowBox[{
+            RowBox[{"lamda1", "[", 
+             RowBox[{"xcart", ",", "ycart"}], "]"}], ",", 
+            RowBox[{"lamda2", "[", 
+             RowBox[{"xcart", ",", "ycart"}], "]"}], ",", "ffww", ",", "ffwd",
+             ",", "ffdd", ",", "p", ",", "d", ",", "\[Omega]", ",", "\[Nu]", 
+            ",", "e", ",", "g", ",", "h11", ",", "h12", ",", "h13", ",", 
+            "h22", ",", "h23", ",", "h33"}], "]"}]}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"ydotcart", "[", 
+         RowBox[{
+         "xcart_", ",", "ycart_", ",", "ffww_", ",", "ffwd_", ",", "ffdd_", 
+          ",", "p_", ",", "d_", ",", "\[Omega]_", ",", "\[Nu]_", ",", "e_", 
+          ",", "g_", ",", "h11_", ",", "h12_", ",", "h13_", ",", "h22_", ",", 
+          "h23_", ",", "h33_"}], "]"}], ":=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"y1", "-", "y3"}], ")"}], "*", 
+          RowBox[{"xdot", "[", 
+           RowBox[{
+            RowBox[{"lamda1", "[", 
+             RowBox[{"xcart", ",", "ycart"}], "]"}], ",", 
+            RowBox[{"lamda2", "[", 
+             RowBox[{"xcart", ",", "ycart"}], "]"}], ",", "ffww", ",", "ffwd",
+             ",", "ffdd", ",", "p", ",", "d", ",", "\[Omega]", ",", "\[Nu]", 
+            ",", "e", ",", "g", ",", "h11", ",", "h12", ",", "h13", ",", 
+            "h22", ",", "h23", ",", "h33"}], "]"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"y2", "-", "y3"}], ")"}], "*", 
+          RowBox[{"ydot", "[", 
+           RowBox[{
+            RowBox[{"lamda1", "[", 
+             RowBox[{"xcart", ",", "ycart"}], "]"}], ",", 
+            RowBox[{"lamda2", "[", 
+             RowBox[{"xcart", ",", "ycart"}], "]"}], ",", "ffww", ",", "ffwd",
+             ",", "ffdd", ",", "p", ",", "d", ",", "\[Omega]", ",", "\[Nu]", 
+            ",", "e", ",", "g", ",", "h11", ",", "h12", ",", "h13", ",", 
+            "h22", ",", "h23", ",", "h33"}], "]"}]}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"\[ScriptCapitalD]", "=", 
+        RowBox[{"Triangle", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"x1", ",", "y1"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"x2", ",", "y2"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"x3", ",", "y3"}], "}"}]}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"HWparabola1", "=", 
+        RowBox[{"Plot", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Sqrt", "[", "3", "]"}], " ", "x", 
+           RowBox[{"(", 
+            RowBox[{"1", "-", "x"}], ")"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", 
+          RowBox[{"PlotStyle", "\[Rule]", "Black"}]}], "]"}]}], ";"}], 
+      "\[IndentingNewLine]", "}"}]}], ",", 
+    RowBox[{"AppearanceElements", "\[Rule]", "All"}], ",", 
+    RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}], " "}]], "Input",\
+
+ CellChangeTimes->{{3.799079163667281*^9, 3.7990791798456*^9}, {
+   3.799079539635455*^9, 3.7990801198373528`*^9}, 3.7990802866871758`*^9, {
+   3.799080352813044*^9, 3.799080353139764*^9}, {3.799080495226598*^9, 
+   3.799080544955566*^9}, {3.7990806189056664`*^9, 3.7990806979526978`*^9}, {
+   3.799080729318397*^9, 3.799080827256426*^9}, {3.7990808601053953`*^9, 
+   3.7990808823029003`*^9}, {3.799337086279798*^9, 3.799337086668539*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"fe78f92a-3b8d-4e60-93d1-acc9fb235b17"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`d$$ = 0, $CellContext`e$$ = 
+    0, $CellContext`ffdd$$ = 0.25, $CellContext`ffwd$$ = 
+    0.5, $CellContext`ffww$$ = 1, $CellContext`g$$ = 0, $CellContext`h11$$ = 
+    1, $CellContext`h12$$ = 1, $CellContext`h13$$ = 1, $CellContext`h22$$ = 
+    1, $CellContext`h23$$ = 1, $CellContext`h33$$ = 1, $CellContext`p$$ = 
+    0.95, $CellContext`\[Nu]$$ = 1, $CellContext`\[Omega]$$ = 1, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[
+       Style["Non-Random mating", 16, Bold]], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`h11$$], 1, 
+       Style[
+       "Mating rate of WW x WW, \!\(\*SubscriptBox[\(h\), \(11\)]\)", 11]}, 0,
+       1}, {{
+       Hold[$CellContext`h12$$], 1, 
+       Style[
+       "Mating rate of WW x WD, \!\(\*SubscriptBox[\(h\), \(12\)]\)", 11]}, 0,
+       1}, {{
+       Hold[$CellContext`h13$$], 1, 
+       Style[
+       "Mating rate of WW x DD, \!\(\*SubscriptBox[\(h\), \(13\)]\)", 11]}, 0,
+       1}, {{
+       Hold[$CellContext`h22$$], 1, 
+       Style[
+       "Mating rate of WD x WD, \!\(\*SubscriptBox[\(h\), \(22\)]\)", 11]}, 0,
+       1}, {{
+       Hold[$CellContext`h23$$], 1, 
+       Style[
+       "Mating rate of WD x DD, \!\(\*SubscriptBox[\(h\), \(23\)]\)", 11]}, 0,
+       1}, {{
+       Hold[$CellContext`h33$$], 1, 
+       Style[
+       "Mating rate of DD x DD, \!\(\*SubscriptBox[\(h\), \(33\)]\)", 11]}, 0,
+       1}, {
+      Hold[
+       Style["Fertility Selection", 16, Bold]], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`ffww$$], 1, 
+       Style["Fertility of WW, \!\(\*SubscriptBox[\(f\), \(WW\)]\)", 11]}, 0, 
+      1}, {{
+       Hold[$CellContext`ffwd$$], 1, 
+       Style["Fertility of WD, \!\(\*SubscriptBox[\(f\), \(WD\)]\)", 11]}, 0, 
+      1}, {{
+       Hold[$CellContext`ffdd$$], 1, 
+       Style["Fertility of DD, \!\(\*SubscriptBox[\(f\), \(DD\)]\)", 11]}, 0, 
+      1}, {
+      Hold[
+       Style["Distortion", 16, Bold]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`p$$], 0.5, 
+       Style["Drive efficiency, p", 11]}, 0.5, 1}, {
+      Hold[
+       Style["Viability Selection", 16, Bold]], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`\[Omega]$$], 1, 
+       Style["Viability of WD, \[Omega]", 11]}, 0, 1}, {{
+       Hold[$CellContext`\[Nu]$$], 1, 
+       Style["Viability of DD, \[Nu]", 11]}, 0, 1}, {{
+       Hold[$CellContext`d$$], 0, 
+       Style["Medea, \!\(\*SubscriptBox[\(d\), \(m\)]\)", 11]}, 0, 1}, {{
+       Hold[$CellContext`e$$], 0, 
+       Style["Semele, \!\(\*SubscriptBox[\(d\), \(s\)]\)", 11]}, 0, 1}, {{
+       Hold[$CellContext`g$$], 0, 
+       Style["Inverse Medea, \!\(\*SubscriptBox[\(d\), \(im\)]\)", 11]}, 0, 
+      1}, {
+      Hold[
+       OpenerView[{
+         Style["Specific drive efficiencies", 11, Bold], 
+         Column[{
+           Manipulate`Place[1], 
+           Manipulate`Place[2], 
+           Manipulate`Place[3]}, Right]}]], 
+      Manipulate`Dump`ThisIsNotAControl}, {
+      Hold[
+       Button[
+       "Reset", {$CellContext`ffww$$ = 1, $CellContext`ffwd$$ = 
+         1, $CellContext`ffdd$$ = 1, $CellContext`p$$ = 0.5, $CellContext`d$$ = 
+         0, $CellContext`\[Omega]$$ = 1, $CellContext`\[Nu]$$ = 
+         1, $CellContext`e$$ = 0, $CellContext`g$$ = 0}, Background -> 
+        RGBColor[0.85, 0.85, 0.85], Appearance -> "FramedPalette"]], 
+      Manipulate`Dump`ThisIsNotAControl}}, Typeset`size$$ = {
+    600., {296., 304.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`h11$2861$$ = 
+    0, $CellContext`h12$2862$$ = 0, $CellContext`h13$2863$$ = 
+    0, $CellContext`h22$2864$$ = 0, $CellContext`h23$2865$$ = 
+    0, $CellContext`h33$2866$$ = 0, $CellContext`ffww$2867$$ = 
+    0, $CellContext`ffwd$2868$$ = 0, $CellContext`ffdd$2869$$ = 
+    0, $CellContext`p$2870$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     2, StandardForm, 
+      "Variables" :> {$CellContext`d$$ = 0, $CellContext`e$$ = 
+        0, $CellContext`ffdd$$ = 1, $CellContext`ffwd$$ = 
+        1, $CellContext`ffww$$ = 1, $CellContext`g$$ = 0, $CellContext`h11$$ = 
+        1, $CellContext`h12$$ = 1, $CellContext`h13$$ = 1, $CellContext`h22$$ = 
+        1, $CellContext`h23$$ = 1, $CellContext`h33$$ = 1, $CellContext`p$$ = 
+        0.5, $CellContext`\[Nu]$$ = 1, $CellContext`\[Omega]$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`h11$$, $CellContext`h11$2861$$, 0], 
+        Hold[$CellContext`h12$$, $CellContext`h12$2862$$, 0], 
+        Hold[$CellContext`h13$$, $CellContext`h13$2863$$, 0], 
+        Hold[$CellContext`h22$$, $CellContext`h22$2864$$, 0], 
+        Hold[$CellContext`h23$$, $CellContext`h23$2865$$, 0], 
+        Hold[$CellContext`h33$$, $CellContext`h33$2866$$, 0], 
+        Hold[$CellContext`ffww$$, $CellContext`ffww$2867$$, 0], 
+        Hold[$CellContext`ffwd$$, $CellContext`ffwd$2868$$, 0], 
+        Hold[$CellContext`ffdd$$, $CellContext`ffdd$2869$$, 0], 
+        Hold[$CellContext`p$$, $CellContext`p$2870$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[{
+         StreamDensityPlot[{
+           $CellContext`xdotcart[$CellContext`xcart, $CellContext`ycart, \
+$CellContext`ffww$$, $CellContext`ffwd$$, $CellContext`ffdd$$, \
+$CellContext`p$$, $CellContext`d$$, $CellContext`\[Omega]$$, $CellContext`\
+\[Nu]$$, $CellContext`e$$, $CellContext`g$$, $CellContext`h11$$, \
+$CellContext`h12$$, $CellContext`h13$$, $CellContext`h22$$, \
+$CellContext`h23$$, $CellContext`h33$$], 
+           $CellContext`ydotcart[$CellContext`xcart, $CellContext`ycart, \
+$CellContext`ffww$$, $CellContext`ffwd$$, $CellContext`ffdd$$, \
+$CellContext`p$$, $CellContext`d$$, $CellContext`\[Omega]$$, $CellContext`\
+\[Nu]$$, $CellContext`e$$, $CellContext`g$$, $CellContext`h11$$, \
+$CellContext`h12$$, $CellContext`h13$$, $CellContext`h22$$, \
+$CellContext`h23$$, $CellContext`h33$$]}, 
+          
+          Element[{$CellContext`xcart, $CellContext`ycart}, $CellContext`\
+\[ScriptCapitalD]], StreamStyle -> {
+            Arrowheads[0.025], 
+            Darker[Gray]}, StreamPoints -> Automatic, ColorFunction -> 
+          "LightTemperatureMap", ColorFunctionScaling -> True, Mesh -> None, 
+          Frame -> 
+          None], $CellContext`leftri, $CellContext`rightri, \
+$CellContext`downl, $CellContext`Tri, $CellContext`HWparabola1, \
+$CellContext`sol1 = ReplaceAll[{$CellContext`xcart, $CellContext`ycart}, 
+            Chop[
+             Quiet[
+              
+              NSolve[{$CellContext`xdotcart[$CellContext`xcart, \
+$CellContext`ycart, $CellContext`ffww$$, $CellContext`ffwd$$, \
+$CellContext`ffdd$$, $CellContext`p$$, $CellContext`d$$, \
+$CellContext`\[Omega]$$, $CellContext`\[Nu]$$, $CellContext`e$$, \
+$CellContext`g$$, $CellContext`h11$$, $CellContext`h12$$, $CellContext`h13$$, \
+$CellContext`h22$$, $CellContext`h23$$, $CellContext`h33$$] == 
+                0, $CellContext`ydotcart[$CellContext`xcart, \
+$CellContext`ycart, $CellContext`ffww$$, $CellContext`ffwd$$, \
+$CellContext`ffdd$$, $CellContext`p$$, $CellContext`d$$, \
+$CellContext`\[Omega]$$, $CellContext`\[Nu]$$, $CellContext`e$$, \
+$CellContext`g$$, $CellContext`h11$$, $CellContext`h12$$, $CellContext`h13$$, \
+$CellContext`h22$$, $CellContext`h23$$, $CellContext`h33$$] == 
+                0, $CellContext`xcart < 0.999, $CellContext`xcart > 
+                0.0001, $CellContext`ycart > 
+                0.0001}, {$CellContext`xcart, $CellContext`ycart}]]]]; 
+         ListPlot[$CellContext`sol1, PlotMarkers -> {"OpenMarkers", 10}, 
+           PlotStyle -> Black]}, AspectRatio -> Automatic, 
+        ImageSize -> {400, 400}, Epilog -> {
+          Inset[
+           Style["DD", 18], {1., -0.05}], 
+          Inset[
+           Style["WW", 18], {0, -0.05}], 
+          Inset[
+           Style["WD", 18], {0.5, 0.9}]}, 
+        BaseStyle -> {10, FontFamily -> "Palatino-Roman"}], "Specifications" :> {
+        Style["Non-Random mating", 16, Bold], {{$CellContext`h11$$, 1, 
+          Style[
+          "Mating rate of WW x WW, \!\(\*SubscriptBox[\(h\), \(11\)]\)", 11]},
+          0, 1}, {{$CellContext`h12$$, 1, 
+          Style[
+          "Mating rate of WW x WD, \!\(\*SubscriptBox[\(h\), \(12\)]\)", 11]},
+          0, 1}, {{$CellContext`h13$$, 1, 
+          Style[
+          "Mating rate of WW x DD, \!\(\*SubscriptBox[\(h\), \(13\)]\)", 11]},
+          0, 1}, {{$CellContext`h22$$, 1, 
+          Style[
+          "Mating rate of WD x WD, \!\(\*SubscriptBox[\(h\), \(22\)]\)", 11]},
+          0, 1}, {{$CellContext`h23$$, 1, 
+          Style[
+          "Mating rate of WD x DD, \!\(\*SubscriptBox[\(h\), \(23\)]\)", 11]},
+          0, 1}, {{$CellContext`h33$$, 1, 
+          Style[
+          "Mating rate of DD x DD, \!\(\*SubscriptBox[\(h\), \(33\)]\)", 11]},
+          0, 1}, Delimiter, 
+        Style["Fertility Selection", 16, Bold], {{$CellContext`ffww$$, 1, 
+          Style["Fertility of WW, \!\(\*SubscriptBox[\(f\), \(WW\)]\)", 11]}, 
+         0, 1}, {{$CellContext`ffwd$$, 1, 
+          Style["Fertility of WD, \!\(\*SubscriptBox[\(f\), \(WD\)]\)", 11]}, 
+         0, 1}, {{$CellContext`ffdd$$, 1, 
+          Style["Fertility of DD, \!\(\*SubscriptBox[\(f\), \(DD\)]\)", 11]}, 
+         0, 1}, Delimiter, 
+        Style["Distortion", 16, Bold], {{$CellContext`p$$, 0.5, 
+          Style["Drive efficiency, p", 11]}, 0.5, 1}, Delimiter, 
+        Style[
+        "Viability Selection", 16, Bold], {{$CellContext`\[Omega]$$, 1, 
+          Style["Viability of WD, \[Omega]", 11]}, 0, 
+         1}, {{$CellContext`\[Nu]$$, 1, 
+          Style["Viability of DD, \[Nu]", 11]}, 0, 
+         1}, {{$CellContext`d$$, 0, 
+          Style["Medea, \!\(\*SubscriptBox[\(d\), \(m\)]\)", 11]}, 0, 1, 
+         ControlPlacement -> 1}, {{$CellContext`e$$, 0, 
+          Style["Semele, \!\(\*SubscriptBox[\(d\), \(s\)]\)", 11]}, 0, 1, 
+         ControlPlacement -> 2}, {{$CellContext`g$$, 0, 
+          Style["Inverse Medea, \!\(\*SubscriptBox[\(d\), \(im\)]\)", 11]}, 0,
+          1, ControlPlacement -> 3}, 
+        OpenerView[{
+          Style["Specific drive efficiencies", 11, Bold], 
+          Column[{
+            Manipulate`Place[1], 
+            Manipulate`Place[2], 
+            Manipulate`Place[3]}, Right]}], 
+        Button[
+        "Reset", {$CellContext`ffww$$ = 1, $CellContext`ffwd$$ = 
+          1, $CellContext`ffdd$$ = 1, $CellContext`p$$ = 
+          0.5, $CellContext`d$$ = 0, $CellContext`\[Omega]$$ = 
+          1, $CellContext`\[Nu]$$ = 1, $CellContext`e$$ = 0, $CellContext`g$$ = 
+          0}, Background -> RGBColor[0.85, 0.85, 0.85], Appearance -> 
+         "FramedPalette"]}, 
+      "Options" :> {AppearanceElements -> All, ControlPlacement -> Left}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{1213., {376., 385.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`Tri = Graphics[
+          
+          Line[{{0, 0}, {1, 0}, {0.5, Sqrt[3]/2}, {0, 
+            0}}]]; $CellContext`leftri = Graphics[{
+           GrayLevel[1], 
+           
+           Polygon[{{-0.08, -0.04}, {-0.08, 0.95}, {0.5, 0.95}, {
+             0.5, Sqrt[3]/2}, {0, 
+             0}, {-0.08, -0.04}}]}]; $CellContext`rightri = Graphics[{
+           GrayLevel[1], 
+           
+           Polygon[{{0.5, 0.95}, {1.095, 0.95}, {1.095, -0.04}, {1, 0}, {
+             0.5, Sqrt[3]/2}, {0.5, 0.95}}]}]; $CellContext`downl = 
+        Graphics[{
+           GrayLevel[1], 
+           
+           Polygon[{{-0.08, -0.04}, {1.08, -0.04}, {
+             1.08, 0}, {-0.04, 0}, {-0.08, -0.04}}]}]; $CellContext`xwd[
+          Pattern[$CellContext`xww, 
+           Blank[]], 
+          Pattern[$CellContext`xdd, 
+           Blank[]]] := 
+        1 - $CellContext`xww - $CellContext`xdd; $CellContext`fww[
+          Pattern[$CellContext`xww, 
+           Blank[]], 
+          Pattern[$CellContext`xdd, 
+           Blank[]], 
+          Pattern[$CellContext`ffww, 
+           Blank[]], 
+          Pattern[$CellContext`ffwd, 
+           Blank[]], 
+          Pattern[$CellContext`ffdd, 
+           Blank[]], 
+          Pattern[$CellContext`p, 
+           Blank[]], 
+          Pattern[$CellContext`d, 
+           Blank[]], 
+          Pattern[$CellContext`e, 
+           Blank[]], 
+          Pattern[$CellContext`h11, 
+           Blank[]], 
+          Pattern[$CellContext`h12, 
+           Blank[]], 
+          Pattern[$CellContext`h22, 
+           
+           Blank[]]] := $CellContext`h11 $CellContext`ffww $CellContext`ffww \
+$CellContext`xww $CellContext`xww + $CellContext`h12 (1 - $CellContext`p) (
+           1 - $CellContext`e/
+           2) $CellContext`ffww $CellContext`ffwd $CellContext`xww \
+$CellContext`xwd[$CellContext`xww, $CellContext`xdd] + $CellContext`h12 (
+           1 - $CellContext`d) (1 - $CellContext`e/2) (
+           1 - $CellContext`p) $CellContext`ffww $CellContext`ffwd \
+$CellContext`xww $CellContext`xwd[$CellContext`xww, $CellContext`xdd] + \
+$CellContext`h22 (
+           1 - $CellContext`d) (
+            1 - $CellContext`p)^2 $CellContext`ffwd $CellContext`ffwd \
+$CellContext`xwd[$CellContext`xww, $CellContext`xdd] \
+$CellContext`xwd[$CellContext`xww, $CellContext`xdd]; $CellContext`fdd[
+          Pattern[$CellContext`xww, 
+           Blank[]], 
+          Pattern[$CellContext`xdd, 
+           Blank[]], 
+          Pattern[$CellContext`ffww, 
+           Blank[]], 
+          Pattern[$CellContext`ffwd, 
+           Blank[]], 
+          Pattern[$CellContext`ffdd, 
+           Blank[]], 
+          Pattern[$CellContext`p, 
+           Blank[]], 
+          Pattern[$CellContext`\[Nu], 
+           Blank[]], 
+          Pattern[$CellContext`h22, 
+           Blank[]], 
+          Pattern[$CellContext`h23, 
+           Blank[]], 
+          Pattern[$CellContext`h33, 
+           
+           Blank[]]] := $CellContext`\[Nu] ($CellContext`h33 \
+$CellContext`ffdd $CellContext`ffdd $CellContext`xdd $CellContext`xdd + 
+          2 $CellContext`h23 $CellContext`p $CellContext`ffdd \
+$CellContext`ffwd $CellContext`xdd $CellContext`xwd[$CellContext`xww, \
+$CellContext`xdd] + $CellContext`h22 $CellContext`p^2 $CellContext`ffwd \
+$CellContext`ffwd $CellContext`xwd[$CellContext`xww, $CellContext`xdd] \
+$CellContext`xwd[$CellContext`xww, $CellContext`xdd]); $CellContext`fwd[
+          Pattern[$CellContext`xww, 
+           Blank[]], 
+          Pattern[$CellContext`xdd, 
+           Blank[]], 
+          Pattern[$CellContext`ffww, 
+           Blank[]], 
+          Pattern[$CellContext`ffwd, 
+           Blank[]], 
+          Pattern[$CellContext`ffdd, 
+           Blank[]], 
+          Pattern[$CellContext`p, 
+           Blank[]], 
+          Pattern[$CellContext`\[Omega], 
+           Blank[]], 
+          Pattern[$CellContext`e, 
+           Blank[]], 
+          Pattern[$CellContext`g, 
+           Blank[]], 
+          Pattern[$CellContext`h12, 
+           Blank[]], 
+          Pattern[$CellContext`h13, 
+           Blank[]], 
+          Pattern[$CellContext`h22, 
+           Blank[]], 
+          Pattern[$CellContext`h23, 
+           Blank[]]] := $CellContext`\[Omega] (
+          2 $CellContext`h22 $CellContext`p (
+            1 - $CellContext`p) $CellContext`ffwd $CellContext`ffwd \
+$CellContext`xwd[$CellContext`xww, $CellContext`xdd] \
+$CellContext`xwd[$CellContext`xww, $CellContext`xdd] + 
+          2 $CellContext`h23 (
+            1 - $CellContext`p) $CellContext`ffdd $CellContext`ffwd \
+$CellContext`xdd $CellContext`xwd[$CellContext`xww, $CellContext`xdd] + 
+          2 $CellContext`h12 (1 - $CellContext`e/2) (1 - $CellContext`g/
+            2) $CellContext`p $CellContext`ffww $CellContext`ffwd \
+$CellContext`xww $CellContext`xwd[$CellContext`xww, $CellContext`xdd] + \
+$CellContext`h13 ((2 - $CellContext`e) ((2 - $CellContext`g)/
+             
+             2)) $CellContext`ffdd $CellContext`ffww $CellContext`xdd \
+$CellContext`xww); $CellContext`ftot[
+          Pattern[$CellContext`xww, 
+           Blank[]], 
+          Pattern[$CellContext`xdd, 
+           Blank[]], 
+          Pattern[$CellContext`ffww, 
+           Blank[]], 
+          Pattern[$CellContext`ffwd, 
+           Blank[]], 
+          Pattern[$CellContext`ffdd, 
+           Blank[]], 
+          Pattern[$CellContext`p, 
+           Blank[]], 
+          Pattern[$CellContext`d, 
+           Blank[]], 
+          Pattern[$CellContext`\[Omega], 
+           Blank[]], 
+          Pattern[$CellContext`\[Nu], 
+           Blank[]], 
+          Pattern[$CellContext`e, 
+           Blank[]], 
+          Pattern[$CellContext`g, 
+           Blank[]], 
+          Pattern[$CellContext`h11, 
+           Blank[]], 
+          Pattern[$CellContext`h12, 
+           Blank[]], 
+          Pattern[$CellContext`h13, 
+           Blank[]], 
+          Pattern[$CellContext`h22, 
+           Blank[]], 
+          Pattern[$CellContext`h23, 
+           Blank[]], 
+          Pattern[$CellContext`h33, 
+           
+           Blank[]]] := $CellContext`fww[$CellContext`xww, $CellContext`xdd, \
+$CellContext`ffww, $CellContext`ffwd, $CellContext`ffdd, $CellContext`p, \
+$CellContext`d, $CellContext`e, $CellContext`h11, $CellContext`h12, \
+$CellContext`h22] + $CellContext`fwd[$CellContext`xww, $CellContext`xdd, \
+$CellContext`ffww, $CellContext`ffwd, $CellContext`ffdd, $CellContext`p, \
+$CellContext`\[Omega], $CellContext`e, $CellContext`g, $CellContext`h12, \
+$CellContext`h13, $CellContext`h22, $CellContext`h23] + \
+$CellContext`fdd[$CellContext`xww, $CellContext`xdd, $CellContext`ffww, \
+$CellContext`ffwd, $CellContext`ffdd, $CellContext`p, $CellContext`\[Nu], \
+$CellContext`h22, $CellContext`h23, $CellContext`h33]; $CellContext`xdot[
+          Pattern[$CellContext`xww, 
+           Blank[]], 
+          Pattern[$CellContext`xdd, 
+           Blank[]], 
+          Pattern[$CellContext`ffww, 
+           Blank[]], 
+          Pattern[$CellContext`ffwd, 
+           Blank[]], 
+          Pattern[$CellContext`ffdd, 
+           Blank[]], 
+          Pattern[$CellContext`p, 
+           Blank[]], 
+          Pattern[$CellContext`d, 
+           Blank[]], 
+          Pattern[$CellContext`\[Omega], 
+           Blank[]], 
+          Pattern[$CellContext`\[Nu], 
+           Blank[]], 
+          Pattern[$CellContext`e, 
+           Blank[]], 
+          Pattern[$CellContext`g, 
+           Blank[]], 
+          Pattern[$CellContext`h11, 
+           Blank[]], 
+          Pattern[$CellContext`h12, 
+           Blank[]], 
+          Pattern[$CellContext`h13, 
+           Blank[]], 
+          Pattern[$CellContext`h22, 
+           Blank[]], 
+          Pattern[$CellContext`h23, 
+           Blank[]], 
+          Pattern[$CellContext`h33, 
+           
+           Blank[]]] := $CellContext`fww[$CellContext`xww, $CellContext`xdd, \
+$CellContext`ffww, $CellContext`ffwd, $CellContext`ffdd, $CellContext`p, \
+$CellContext`d, $CellContext`e, $CellContext`h11, $CellContext`h12, \
+$CellContext`h22] - $CellContext`xww $CellContext`ftot[$CellContext`xww, \
+$CellContext`xdd, $CellContext`ffww, $CellContext`ffwd, $CellContext`ffdd, \
+$CellContext`p, $CellContext`d, $CellContext`\[Omega], $CellContext`\[Nu], \
+$CellContext`e, $CellContext`g, $CellContext`h11, $CellContext`h12, \
+$CellContext`h13, $CellContext`h22, $CellContext`h23, $CellContext`h33]; \
+$CellContext`ydot[
+          Pattern[$CellContext`xww, 
+           Blank[]], 
+          Pattern[$CellContext`xdd, 
+           Blank[]], 
+          Pattern[$CellContext`ffww, 
+           Blank[]], 
+          Pattern[$CellContext`ffwd, 
+           Blank[]], 
+          Pattern[$CellContext`ffdd, 
+           Blank[]], 
+          Pattern[$CellContext`p, 
+           Blank[]], 
+          Pattern[$CellContext`d, 
+           Blank[]], 
+          Pattern[$CellContext`\[Omega], 
+           Blank[]], 
+          Pattern[$CellContext`\[Nu], 
+           Blank[]], 
+          Pattern[$CellContext`e, 
+           Blank[]], 
+          Pattern[$CellContext`g, 
+           Blank[]], 
+          Pattern[$CellContext`h11, 
+           Blank[]], 
+          Pattern[$CellContext`h12, 
+           Blank[]], 
+          Pattern[$CellContext`h13, 
+           Blank[]], 
+          Pattern[$CellContext`h22, 
+           Blank[]], 
+          Pattern[$CellContext`h23, 
+           Blank[]], 
+          Pattern[$CellContext`h33, 
+           
+           Blank[]]] := $CellContext`fdd[$CellContext`xww, $CellContext`xdd, \
+$CellContext`ffww, $CellContext`ffwd, $CellContext`ffdd, $CellContext`p, \
+$CellContext`\[Nu], $CellContext`h22, $CellContext`h23, $CellContext`h33] - \
+$CellContext`xdd $CellContext`ftot[$CellContext`xww, $CellContext`xdd, \
+$CellContext`ffww, $CellContext`ffwd, $CellContext`ffdd, $CellContext`p, \
+$CellContext`d, $CellContext`\[Omega], $CellContext`\[Nu], $CellContext`e, \
+$CellContext`g, $CellContext`h11, $CellContext`h12, $CellContext`h13, \
+$CellContext`h22, $CellContext`h23, $CellContext`h33]; $CellContext`x1 = 
+        0; $CellContext`y1 = 0; $CellContext`x3 = 0.5; $CellContext`y3 = 
+        Sqrt[3]/2; $CellContext`x2 = 1; $CellContext`y2 = 
+        0; $CellContext`xncart[
+          Pattern[$CellContext`x, 
+           Blank[]], 
+          Pattern[$CellContext`y, 
+           
+           Blank[]]] := $CellContext`x1 $CellContext`x + $CellContext`x2 \
+$CellContext`y + $CellContext`x3 (
+           1 - $CellContext`x - $CellContext`y); $CellContext`yncart[
+          Pattern[$CellContext`x, 
+           Blank[]], 
+          Pattern[$CellContext`y, 
+           
+           Blank[]]] := $CellContext`y1 $CellContext`x + $CellContext`y2 \
+$CellContext`y + $CellContext`y3 (
+           1 - $CellContext`x - $CellContext`y); $CellContext`lamda1[
+          Pattern[$CellContext`xcart, 
+           Blank[]], 
+          Pattern[$CellContext`ycart, 
+           
+           Blank[]]] := (($CellContext`y2 - $CellContext`y3) \
+($CellContext`xcart - $CellContext`x3) + ($CellContext`x3 - $CellContext`x2) \
+($CellContext`ycart - $CellContext`y3))/(($CellContext`y2 - $CellContext`y3) \
+($CellContext`x1 - $CellContext`x3) + ($CellContext`x3 - $CellContext`x2) \
+($CellContext`y1 - $CellContext`y3)); $CellContext`lamda2[
+          Pattern[$CellContext`xcart, 
+           Blank[]], 
+          Pattern[$CellContext`ycart, 
+           
+           Blank[]]] := (($CellContext`y3 - $CellContext`y1) \
+($CellContext`xcart - $CellContext`x3) + ($CellContext`x1 - $CellContext`x3) \
+($CellContext`ycart - $CellContext`y3))/(($CellContext`y2 - $CellContext`y3) \
+($CellContext`x1 - $CellContext`x3) + ($CellContext`x3 - $CellContext`x2) \
+($CellContext`y1 - $CellContext`y3)); $CellContext`xdotcart[
+          Pattern[$CellContext`xcart, 
+           Blank[]], 
+          Pattern[$CellContext`ycart, 
+           Blank[]], 
+          Pattern[$CellContext`ffww, 
+           Blank[]], 
+          Pattern[$CellContext`ffwd, 
+           Blank[]], 
+          Pattern[$CellContext`ffdd, 
+           Blank[]], 
+          Pattern[$CellContext`p, 
+           Blank[]], 
+          Pattern[$CellContext`d, 
+           Blank[]], 
+          Pattern[$CellContext`\[Omega], 
+           Blank[]], 
+          Pattern[$CellContext`\[Nu], 
+           Blank[]], 
+          Pattern[$CellContext`e, 
+           Blank[]], 
+          Pattern[$CellContext`g, 
+           Blank[]], 
+          Pattern[$CellContext`h11, 
+           Blank[]], 
+          Pattern[$CellContext`h12, 
+           Blank[]], 
+          Pattern[$CellContext`h13, 
+           Blank[]], 
+          Pattern[$CellContext`h22, 
+           Blank[]], 
+          Pattern[$CellContext`h23, 
+           Blank[]], 
+          Pattern[$CellContext`h33, 
+           
+           Blank[]]] := ($CellContext`x1 - $CellContext`x3) \
+$CellContext`xdot[
+            $CellContext`lamda1[$CellContext`xcart, $CellContext`ycart], 
+            $CellContext`lamda2[$CellContext`xcart, $CellContext`ycart], \
+$CellContext`ffww, $CellContext`ffwd, $CellContext`ffdd, $CellContext`p, \
+$CellContext`d, $CellContext`\[Omega], $CellContext`\[Nu], $CellContext`e, \
+$CellContext`g, $CellContext`h11, $CellContext`h12, $CellContext`h13, \
+$CellContext`h22, $CellContext`h23, $CellContext`h33] + ($CellContext`x2 - \
+$CellContext`x3) $CellContext`ydot[
+            $CellContext`lamda1[$CellContext`xcart, $CellContext`ycart], 
+            $CellContext`lamda2[$CellContext`xcart, $CellContext`ycart], \
+$CellContext`ffww, $CellContext`ffwd, $CellContext`ffdd, $CellContext`p, \
+$CellContext`d, $CellContext`\[Omega], $CellContext`\[Nu], $CellContext`e, \
+$CellContext`g, $CellContext`h11, $CellContext`h12, $CellContext`h13, \
+$CellContext`h22, $CellContext`h23, $CellContext`h33]; $CellContext`ydotcart[
+          Pattern[$CellContext`xcart, 
+           Blank[]], 
+          Pattern[$CellContext`ycart, 
+           Blank[]], 
+          Pattern[$CellContext`ffww, 
+           Blank[]], 
+          Pattern[$CellContext`ffwd, 
+           Blank[]], 
+          Pattern[$CellContext`ffdd, 
+           Blank[]], 
+          Pattern[$CellContext`p, 
+           Blank[]], 
+          Pattern[$CellContext`d, 
+           Blank[]], 
+          Pattern[$CellContext`\[Omega], 
+           Blank[]], 
+          Pattern[$CellContext`\[Nu], 
+           Blank[]], 
+          Pattern[$CellContext`e, 
+           Blank[]], 
+          Pattern[$CellContext`g, 
+           Blank[]], 
+          Pattern[$CellContext`h11, 
+           Blank[]], 
+          Pattern[$CellContext`h12, 
+           Blank[]], 
+          Pattern[$CellContext`h13, 
+           Blank[]], 
+          Pattern[$CellContext`h22, 
+           Blank[]], 
+          Pattern[$CellContext`h23, 
+           Blank[]], 
+          Pattern[$CellContext`h33, 
+           
+           Blank[]]] := ($CellContext`y1 - $CellContext`y3) \
+$CellContext`xdot[
+            $CellContext`lamda1[$CellContext`xcart, $CellContext`ycart], 
+            $CellContext`lamda2[$CellContext`xcart, $CellContext`ycart], \
+$CellContext`ffww, $CellContext`ffwd, $CellContext`ffdd, $CellContext`p, \
+$CellContext`d, $CellContext`\[Omega], $CellContext`\[Nu], $CellContext`e, \
+$CellContext`g, $CellContext`h11, $CellContext`h12, $CellContext`h13, \
+$CellContext`h22, $CellContext`h23, $CellContext`h33] + ($CellContext`y2 - \
+$CellContext`y3) $CellContext`ydot[
+            $CellContext`lamda1[$CellContext`xcart, $CellContext`ycart], 
+            $CellContext`lamda2[$CellContext`xcart, $CellContext`ycart], \
+$CellContext`ffww, $CellContext`ffwd, $CellContext`ffdd, $CellContext`p, \
+$CellContext`d, $CellContext`\[Omega], $CellContext`\[Nu], $CellContext`e, \
+$CellContext`g, $CellContext`h11, $CellContext`h12, $CellContext`h13, \
+$CellContext`h22, $CellContext`h23, $CellContext`h33]; $CellContext`\
+\[ScriptCapitalD] = 
+        Triangle[{{$CellContext`x1, $CellContext`y1}, {$CellContext`x2, \
+$CellContext`y2}, {$CellContext`x3, $CellContext`y3}}]; \
+$CellContext`HWparabola1 = 
+        Plot[Sqrt[3] $CellContext`x (1 - $CellContext`x), {$CellContext`x, 0, 
+           1}, PlotStyle -> Black]; Null}; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.7990790000653133`*^9, 3.799079180628305*^9, {3.799080913928087*^9, 
+   3.799080951083488*^9}, {3.799082663223895*^9, 3.799082678465477*^9}, 
+   3.799084316918648*^9, {3.799337119012312*^9, 3.799337160163437*^9}, {
+   3.799337219055539*^9, 3.7993372231099358`*^9}, {3.799518238805265*^9, 
+   3.799518240169161*^9}, 3.799521913078946*^9, {3.807254904670844*^9, 
+   3.807254918905476*^9}, 3.8072557909328747`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"c818f48e-5dd0-4716-aaf0-b94ff7d94518"]
+}, Open  ]]
+},
+WindowSize->{1421, 1335},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 30599, 751, 3251, "Input",ExpressionUUID->"fe78f92a-3b8d-4e60-93d1-acc9fb235b17"],
+Cell[31182, 775, 28056, 633, 823, "Output",ExpressionUUID->"c818f48e-5dd0-4716-aaf0-b94ff7d94518"]
+}, Open  ]]
+}
+]
+*)
+
