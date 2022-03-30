@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     59680,       1427]
-NotebookOptionsPosition[     59254,       1411]
-NotebookOutlinePosition[     59591,       1426]
-CellTagsIndexPosition[     59548,       1423]
+NotebookDataLength[     59253,       1418]
+NotebookOptionsPosition[     58765,       1401]
+NotebookOutlinePosition[     59164,       1417]
+CellTagsIndexPosition[     59121,       1414]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -54,13 +54,12 @@ Cell[BoxData[
              RowBox[{"Arrowheads", "[", "0.025", "]"}], ",", 
              RowBox[{"Darker", "[", "Gray", "]"}]}], "}"}]}], ",", " ", 
           RowBox[{"StreamPoints", "\[Rule]", "Automatic"}], ",", 
+          RowBox[{"StreamColorFunction", "\[Rule]", "None"}], ",", 
           RowBox[{"ColorFunction", "\[Rule]", "\"\<LightTemperatureMap\>\""}],
            ",", 
-          RowBox[{"ColorFunctionScaling", "\[Rule]", "True"}], ",", 
-          RowBox[{"Mesh", "\[Rule]", "None"}], ",", 
-          RowBox[{"Frame", "\[Rule]", "None"}]}], "]"}], ",", "leftri", ",", 
-        "\[IndentingNewLine]", "rightri", ",", "\[IndentingNewLine]", "downl",
-         ",", "Tri", ",", "HWparabola1", ",", 
+          RowBox[{"ColorFunctionScaling", "\[Rule]", "True"}]}], "]"}], ",", 
+        "leftri", ",", "\[IndentingNewLine]", "rightri", ",", 
+        "\[IndentingNewLine]", "downl", ",", "Tri", ",", "HWparabola1", ",", 
         RowBox[{
          RowBox[{"sol1", " ", "=", " ", 
           RowBox[{
@@ -770,21 +769,29 @@ Cell[BoxData[
    3.799080352813044*^9, 3.799080353139764*^9}, {3.799080495226598*^9, 
    3.799080544955566*^9}, {3.7990806189056664`*^9, 3.7990806979526978`*^9}, {
    3.799080729318397*^9, 3.799080827256426*^9}, {3.7990808601053953`*^9, 
-   3.7990808823029003`*^9}, {3.799337086279798*^9, 3.799337086668539*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"fe78f92a-3b8d-4e60-93d1-acc9fb235b17"],
+   3.7990808823029003`*^9}, {3.799337086279798*^9, 3.799337086668539*^9}, {
+   3.857538655306016*^9, 3.857538678681521*^9}, {3.8575399358948107`*^9, 
+   3.857540004290242*^9}, {3.85754004799649*^9, 3.857540122408259*^9}, {
+   3.857540160268868*^9, 3.857540192825337*^9}, {3.8575423939743433`*^9, 
+   3.8575423983995123`*^9}, {3.857557691536038*^9, 3.857557692081396*^9}, {
+   3.8575577511548023`*^9, 3.857557777887848*^9}, {3.857557870179882*^9, 
+   3.857557875511668*^9}, {3.8575579810411882`*^9, 3.857557981586638*^9}, {
+   3.8575580457861977`*^9, 3.857558046428336*^9}, {3.85755870302017*^9, 
+   3.857558703402319*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"fe78f92a-3b8d-4e60-93d1-acc9fb235b17"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`d$$ = 0, $CellContext`e$$ = 
-    0, $CellContext`ffdd$$ = 0.25, $CellContext`ffwd$$ = 
-    0.5, $CellContext`ffww$$ = 1, $CellContext`g$$ = 0, $CellContext`h11$$ = 
-    1, $CellContext`h12$$ = 1, $CellContext`h13$$ = 1, $CellContext`h22$$ = 
-    1, $CellContext`h23$$ = 1, $CellContext`h33$$ = 1, $CellContext`p$$ = 
-    0.95, $CellContext`\[Nu]$$ = 1, $CellContext`\[Omega]$$ = 1, 
-    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+    0, $CellContext`ffdd$$ = 1, $CellContext`ffwd$$ = 1, $CellContext`ffww$$ =
+     1, $CellContext`g$$ = 0, $CellContext`h11$$ = 1, $CellContext`h12$$ = 
+    1, $CellContext`h13$$ = 1, $CellContext`h22$$ = 1, $CellContext`h23$$ = 
+    1, $CellContext`h33$$ = 1, $CellContext`p$$ = 0.5, $CellContext`\[Nu]$$ = 
+    1, $CellContext`\[Omega]$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
       Hold[
        Style["Non-Random mating", 16, Bold]], 
       Manipulate`Dump`ThisIsNotAControl}, {{
@@ -858,13 +865,8 @@ Cell[BoxData[
          1, $CellContext`e$$ = 0, $CellContext`g$$ = 0}, Background -> 
         RGBColor[0.85, 0.85, 0.85], Appearance -> "FramedPalette"]], 
       Manipulate`Dump`ThisIsNotAControl}}, Typeset`size$$ = {
-    600., {296., 304.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = False, $CellContext`h11$2861$$ = 
-    0, $CellContext`h12$2862$$ = 0, $CellContext`h13$2863$$ = 
-    0, $CellContext`h22$2864$$ = 0, $CellContext`h23$2865$$ = 
-    0, $CellContext`h33$2866$$ = 0, $CellContext`ffww$2867$$ = 
-    0, $CellContext`ffwd$2868$$ = 0, $CellContext`ffdd$2869$$ = 
-    0, $CellContext`p$2870$$ = 0}, 
+    400., {198., 202.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      2, StandardForm, 
       "Variables" :> {$CellContext`d$$ = 0, $CellContext`e$$ = 
@@ -873,17 +875,7 @@ Cell[BoxData[
         1, $CellContext`h12$$ = 1, $CellContext`h13$$ = 1, $CellContext`h22$$ = 
         1, $CellContext`h23$$ = 1, $CellContext`h33$$ = 1, $CellContext`p$$ = 
         0.5, $CellContext`\[Nu]$$ = 1, $CellContext`\[Omega]$$ = 1}, 
-      "ControllerVariables" :> {
-        Hold[$CellContext`h11$$, $CellContext`h11$2861$$, 0], 
-        Hold[$CellContext`h12$$, $CellContext`h12$2862$$, 0], 
-        Hold[$CellContext`h13$$, $CellContext`h13$2863$$, 0], 
-        Hold[$CellContext`h22$$, $CellContext`h22$2864$$, 0], 
-        Hold[$CellContext`h23$$, $CellContext`h23$2865$$, 0], 
-        Hold[$CellContext`h33$$, $CellContext`h33$2866$$, 0], 
-        Hold[$CellContext`ffww$$, $CellContext`ffww$2867$$, 0], 
-        Hold[$CellContext`ffwd$$, $CellContext`ffwd$2868$$, 0], 
-        Hold[$CellContext`ffdd$$, $CellContext`ffdd$2869$$, 0], 
-        Hold[$CellContext`p$$, $CellContext`p$2870$$, 0]}, 
+      "ControllerVariables" :> {}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -906,10 +898,9 @@ $CellContext`h23$$, $CellContext`h33$$]},
           Element[{$CellContext`xcart, $CellContext`ycart}, $CellContext`\
 \[ScriptCapitalD]], StreamStyle -> {
             Arrowheads[0.025], 
-            Darker[Gray]}, StreamPoints -> Automatic, ColorFunction -> 
-          "LightTemperatureMap", ColorFunctionScaling -> True, Mesh -> None, 
-          Frame -> 
-          None], $CellContext`leftri, $CellContext`rightri, \
+            Darker[Gray]}, StreamPoints -> Automatic, StreamColorFunction -> 
+          None, ColorFunction -> "LightTemperatureMap", ColorFunctionScaling -> 
+          True], $CellContext`leftri, $CellContext`rightri, \
 $CellContext`downl, $CellContext`Tri, $CellContext`HWparabola1, \
 $CellContext`sol1 = ReplaceAll[{$CellContext`xcart, $CellContext`ycart}, 
             Chop[
@@ -995,7 +986,7 @@ $CellContext`h22$$, $CellContext`h23$$, $CellContext`h33$$] ==
          "FramedPalette"]}, 
       "Options" :> {AppearanceElements -> All, ControlPlacement -> Left}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{1213., {376., 385.}},
+     ImageSizeCache->{815., {267., 273.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1121,7 +1112,6 @@ $CellContext`xdd $CellContext`xwd[$CellContext`xww, $CellContext`xdd] +
             2) $CellContext`p $CellContext`ffww $CellContext`ffwd \
 $CellContext`xww $CellContext`xwd[$CellContext`xww, $CellContext`xdd] + \
 $CellContext`h13 ((2 - $CellContext`e) ((2 - $CellContext`g)/
-             
              2)) $CellContext`ffdd $CellContext`ffww $CellContext`xdd \
 $CellContext`xww); $CellContext`ftot[
           Pattern[$CellContext`xww, 
@@ -1400,19 +1390,20 @@ $CellContext`HWparabola1 =
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{
-  3.7990790000653133`*^9, 3.799079180628305*^9, {3.799080913928087*^9, 
-   3.799080951083488*^9}, {3.799082663223895*^9, 3.799082678465477*^9}, 
-   3.799084316918648*^9, {3.799337119012312*^9, 3.799337160163437*^9}, {
-   3.799337219055539*^9, 3.7993372231099358`*^9}, {3.799518238805265*^9, 
-   3.799518240169161*^9}, 3.799521913078946*^9, {3.807254904670844*^9, 
-   3.807254918905476*^9}, 3.8072557909328747`*^9},
- CellLabel->"Out[1]=",ExpressionUUID->"c818f48e-5dd0-4716-aaf0-b94ff7d94518"]
+  3.85754008042531*^9, {3.857540111090736*^9, 3.8575401228673162`*^9}, {
+   3.857540167322933*^9, 3.8575401933050957`*^9}, 3.857542398932905*^9, {
+   3.8575576664319468`*^9, 3.8575577012424593`*^9}, {3.857557758743696*^9, 
+   3.857557785307222*^9}, 3.85755787599463*^9, {3.857557983901775*^9, 
+   3.857557988620178*^9}, {3.857558047205132*^9, 3.857558053657557*^9}, 
+   3.857558704004333*^9},
+ CellLabel->"Out[27]=",ExpressionUUID->"57424554-9aa2-4945-8db6-c1716cd08e61"]
 }, Open  ]]
 },
-WindowSize->{1421, 1335},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+WindowSize->{1421, 872},
+WindowMargins->{{169, Automatic}, {Automatic, -76}},
+FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"15050a92-8157-4da6-9186-8679995de543"
 ]
 (* End of Notebook Content *)
 
@@ -1426,8 +1417,8 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 30599, 751, 3251, "Input",ExpressionUUID->"fe78f92a-3b8d-4e60-93d1-acc9fb235b17"],
-Cell[31182, 775, 28056, 633, 823, "Output",ExpressionUUID->"c818f48e-5dd0-4716-aaf0-b94ff7d94518"]
+Cell[580, 22, 31109, 758, 1652, "Input",ExpressionUUID->"fe78f92a-3b8d-4e60-93d1-acc9fb235b17"],
+Cell[31692, 782, 27057, 616, 582, "Output",ExpressionUUID->"57424554-9aa2-4945-8db6-c1716cd08e61"]
 }, Open  ]]
 }
 ]
