@@ -1,0 +1,1962 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     62573,       1954]
+NotebookOptionsPosition[     61480,       1929]
+NotebookOutlinePosition[     61878,       1945]
+CellTagsIndexPosition[     61835,       1942]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"fww", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"d", "=", "0"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.857462440831822*^9, 3.8574624444946947`*^9}, {
+  3.857462495985942*^9, 3.857462497537485*^9}, {3.857462572885326*^9, 
+  3.857462599841319*^9}, {3.857462923259211*^9, 3.85746292460211*^9}, {
+  3.857463090153227*^9, 3.8574630904874573`*^9}},
+ CellLabel->
+  "In[122]:=",ExpressionUUID->"b4289d31-84e9-4dfa-96d8-648caaa62330"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"yww", "=", 
+   RowBox[{"1", "/", "3"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"ywd", "=", 
+   RowBox[{"1", "/", "3"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"ydd", "=", 
+   RowBox[{"1", "/", "3"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"xww", "=", 
+   RowBox[{"1", "/", "3"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"xwd", "=", 
+   RowBox[{"1", "/", "3"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"xdd", "=", 
+   RowBox[{"1", "/", "3"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8574624173355093`*^9, 3.8574624263388147`*^9}, {
+  3.857462686199336*^9, 3.857462692094667*^9}},
+ CellLabel->
+  "In[125]:=",ExpressionUUID->"82c71a7e-2728-4eb0-83d7-fc7e1b3df677"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"fddoverc", "=", 
+     RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"For", "[", 
+    RowBox[{
+     RowBox[{"c", "=", "0"}], ",", 
+     RowBox[{"c", "\[LessEqual]", "0.5"}], ",", 
+     RowBox[{"c", "=", 
+      RowBox[{"c", "+", "0.1"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"fddoverr", "=", 
+       RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"r", "=", "1"}], ",", 
+        RowBox[{"r", "\[LessEqual]", "10"}], ",", 
+        RowBox[{"r", "++"}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"fwd", "=", 
+          RowBox[{"1", "-", "c"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"fdd", "=", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", "c"}], ")"}], "^", "2"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"(*", 
+          RowBox[{
+           RowBox[{"Fww", "=", 
+            RowBox[{"r", " ", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"fdd", " ", "xdd"}], "+", 
+                RowBox[{"fwd", " ", "xwd"}], "+", 
+                RowBox[{"fww", " ", "xww"}]}], ")"}], "^", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"-", "1"}], ")"}], "+", "r"}], ")"}]}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"-", "1"}], ")"}], " ", "fwd", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"-", "1"}], ")"}], "+", "p"}], ")"}], " ", "xwd"}],
+                "+", 
+               RowBox[{"fww", " ", "xww"}]}], ")"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"-", "1"}], ")"}], "+", "d"}], ")"}], " ", "fwd", 
+                " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"-", "1"}], ")"}], "+", "p"}], ")"}], " ", "xwd"}],
+                "+", 
+               RowBox[{"fww", " ", "xww"}]}], ")"}]}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Fwd", "=", 
+            RowBox[{"r", " ", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"fdd", " ", "xdd"}], "+", 
+                RowBox[{"fwd", " ", "xwd"}], "+", 
+                RowBox[{"fww", " ", "xww"}]}], ")"}], "^", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"-", "1"}], ")"}], "+", "r"}], ")"}]}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"-", "1"}], ")"}], " ", "fwd", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"-", "1"}], ")"}], "+", "p"}], ")"}], " ", 
+                RowBox[{"(", " ", 
+                 RowBox[{
+                  RowBox[{"2", " ", "fdd", " ", "xdd", " ", "xwd"}], "+", 
+                  RowBox[{"2", " ", "fwd", " ", "p", " ", 
+                   RowBox[{"xwd", "^", "2"}]}]}], ")"}]}], "+", 
+               RowBox[{"fww", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"2", " ", "fdd", " ", "xdd", " ", "xww"}], "+", 
+                  RowBox[{
+                  "2", " ", "fwd", " ", "p", " ", "xwd", " ", "xww"}]}], 
+                 ")"}]}]}], ")"}]}]}], ";"}], "*)"}], "\[IndentingNewLine]", 
+         RowBox[{"Fdd", "=", 
+          RowBox[{"r", " ", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"fdd", " ", "xdd"}], "+", 
+              RowBox[{"fwd", " ", "p", " ", "xwd"}]}], ")"}], "^", "2"}], " ", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"fdd", " ", "xdd"}], "+", 
+              RowBox[{"fwd", " ", "xwd"}], "+", 
+              RowBox[{"fww", " ", "xww"}]}], ")"}], "^", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"-", "1"}], ")"}], "+", " ", "r"}], ")"}]}]}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"fddoverr", ",", 
+           RowBox[{"{", 
+            RowBox[{"r", ",", "Fdd"}], "}"}]}], "]"}]}]}], 
+       "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"fddoverc", ",", "fddoverr"}], "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.8574622566599083`*^9, 3.857462352595755*^9}, {
+  3.857462385289299*^9, 3.8574624105476627`*^9}, {3.857462464194358*^9, 
+  3.857462524281722*^9}, {3.857462578688608*^9, 3.857462590000083*^9}, {
+  3.857462864170508*^9, 3.85746289216194*^9}, {3.857462928284801*^9, 
+  3.857462982745914*^9}, {3.857463030394331*^9, 3.857463086489418*^9}, {
+  3.857463218136668*^9, 3.85746322530772*^9}, {3.8574692716387177`*^9, 
+  3.857469271817751*^9}},
+ CellLabel->
+  "In[131]:=",ExpressionUUID->"5705c4e9-2bb4-46a9-ba84-16de553acbee"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{
+   RowBox[{"fddoverc", "\[LeftDoubleBracket]", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2", ",", "3", ",", "4", ",", "5"}], "}"}], 
+    "\[RightDoubleBracket]"}], ",", 
+   RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Automatic", ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "0.1"}], ",", "2.1"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+   RowBox[{"FrameStyle", "\[Rule]", 
+    RowBox[{"Directive", "[", 
+     RowBox[{"Black", ",", 
+      RowBox[{"Thickness", "[", "0.002", "]"}]}], "]"}]}], ",", 
+   RowBox[{"Mesh", "\[Rule]", "True"}], ",", 
+   RowBox[{"MeshStyle", "\[Rule]", 
+    RowBox[{"Directive", "[", 
+     RowBox[{"PointSize", "[", "Medium", "]"}], "]"}]}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Directive", "[", 
+       RowBox[{"Red", ",", 
+        RowBox[{"Opacity", "[", "0.4", "]"}]}], "]"}], ",", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Red", ",", 
+        RowBox[{"Opacity", "[", "0.5", "]"}]}], "]"}], ",", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Red", ",", 
+        RowBox[{"Opacity", "[", "0.6", "]"}]}], "]"}], ",", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Red", ",", 
+        RowBox[{"Opacity", "[", "0.7", "]"}]}], "]"}], ",", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Red", ",", 
+        RowBox[{"Opacity", "[", "0.8", "]"}]}], "]"}], ",", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Red", ",", 
+        RowBox[{"Opacity", "[", "0.9", "]"}]}], "]"}]}], "}"}]}], ",", 
+   RowBox[{"Epilog", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Inset", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<c = 0.0\>\"", ",", "12"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"4", ",", "1.4"}], "}"}]}], "]"}], ",", 
+      RowBox[{"Inset", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<c = 0.1\>\"", ",", "12"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"5.1", ",", "0.9"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Inset", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<c = 0.2\>\"", ",", "12"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"7", ",", "0.6"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Inset", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<c = 0.3\>\"", ",", "12"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"7", ",", "0.3"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Inset", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<c = 0.4\>\"", ",", "12"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", "0.01"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Inset", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"Rotate", "[", 
+           RowBox[{"\"\<Monogamy\>\"", ",", 
+            RowBox[{"90", " ", "Degree"}]}], "]"}], ",", "12"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0.75", ",", "1.2"}], "}"}]}], "]"}]}], "}"}]}], ",", 
+   RowBox[{"FrameLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{
+       "\"\<Degree of polygamy, \!\(\*StyleBox[\"r\",FontSlant->\"Italic\"]\)\
+\>\"", ",", "Black", ",", "16"}], "]"}], ",", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+       "\"\<Production rate of genotype DD\>\"", ",", "Black", ",", "16"}], 
+       "]"}]}], "}"}]}], ",", 
+   RowBox[{"FrameStyle", "\[Rule]", 
+    RowBox[{"Directive", "[", 
+     RowBox[{"Black", ",", 
+      RowBox[{"Thickness", "[", "0.003", "]"}]}], "]"}]}], ",", 
+   RowBox[{"GridLines", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "1", "}"}], ",", "None"}], "}"}]}], ",", 
+   RowBox[{"GridLinesStyle", "\[Rule]", 
+    RowBox[{"Directive", "[", 
+     RowBox[{"Black", ",", 
+      RowBox[{"Thickness", "[", "0.003", "]"}]}], "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.857462985001278*^9, 3.85746301247283*^9}, {
+  3.857463094596291*^9, 3.85746317711889*^9}, {3.857463568955711*^9, 
+  3.85746364568685*^9}, {3.8574637376627703`*^9, 3.857463812497068*^9}, {
+  3.857469287487791*^9, 3.857469287670149*^9}, {3.8578045195799513`*^9, 
+  3.85780461458829*^9}, {3.857804657049386*^9, 3.857804667834634*^9}, {
+  3.857804717165718*^9, 3.857804721406825*^9}, {3.8578047597425547`*^9, 
+  3.8578048188659573`*^9}, {3.857804853421226*^9, 3.857804893692891*^9}, {
+  3.8578050500709467`*^9, 3.857805353343792*^9}, {3.857811519312739*^9, 
+  3.8578115232597303`*^9}, {3.857814084362227*^9, 3.857814213269575*^9}, {
+  3.857814314974511*^9, 3.857814330046563*^9}, {3.857883799249645*^9, 
+  3.857883799462214*^9}},
+ CellLabel->
+  "In[134]:=",ExpressionUUID->"6b917a80-0c60-4791-9c11-b0303004c46b"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, GraphicsComplexBox[CompressedData["
+1:eJxTTMoPSmViYGBIAGIQDQEf7GWOFwLRHXuogAOE/wbK53AIBYOvUL4AVP6P
+PXX0izgUgQUYHSB8FYezZ0CAwQFmPpf0vDjN01fg5qtuV7s77cQjuPnyic9K
+Fxe/hJv/fl9kw87l7+Dmu6w2OrPR7yOUL+Fw8MWD4vuHPkH5Mg4Cr1sPbDz6
+GcpXcCi/vO7kjMwvUL6Sg8V+d9fmfTC+isMyo8wcvUtf4P6fcrreY3/tWbj7
+FkoeYS/7cx3uvunXOc7EON+Fu+/lBqGM77vvw91nFPf8yjrFB3D3qeZNkFOp
+vQ93n7A230SFh3fh7vv2/t1e7mO34e7zsrqisjHzJtx9jF28p8y/X4O7r8e/
+5+4d5SNw9/lcKHXuTz8Ld98j1j0HwyQvwN2n0fut/n7Yebj7ZuoeUbk/4wzc
+fX7bL6SI8p6Eu2/zjKvW50OPwt0XxxW2euuZg3D3dcVMcU212Qt3X+QrM621
+27bD3aflLPP6kdkuuPuubN8pV6RwEBF+hZ8PHjxxAO6+B1kZB5/b7oW7r6or
+0qX24Xa4+zZ+fHro545NcPedu7eZZUHXGrj7WLa8YZvrvxTuvicvWfIOBM+H
+u2/No2OP9+2dZp8GAs+E0NKjBDQ9szrAzLfse2zR95jDAWY+JH3zOMDMh7kb
+Zj4kvQs6wPw/mr5H0/dApG8ATEC2mQ==
+    "], {{{}, {}, 
+      {RGBColor[1, 0, 0], PointSize[0.011000000000000001`], AbsoluteThickness[
+       1.6], Opacity[0.4], LineBox[{1, 2, 3, 4, 51}]}, 
+      {RGBColor[1, 0, 0], PointSize[0.011000000000000001`], AbsoluteThickness[
+       1.6], Opacity[0.5], LineBox[{11, 12, 13, 14, 15, 16, 17, 18, 19, 20}]}, 
+      {RGBColor[1, 0, 0], PointSize[0.011000000000000001`], AbsoluteThickness[
+       1.6], Opacity[0.6], LineBox[{21, 22, 23, 24, 25, 26, 27, 28, 29, 30}]}, 
+      {RGBColor[1, 0, 0], PointSize[0.011000000000000001`], AbsoluteThickness[
+       1.6], Opacity[0.7], LineBox[{31, 32, 33, 34, 35, 36, 37, 38, 39, 40}]}, 
+      {RGBColor[1, 0, 0], PointSize[0.011000000000000001`], AbsoluteThickness[
+       1.6], Opacity[0.8], 
+       LineBox[{41, 42, 43, 44, 45, 46, 47, 48, 49, 50}]}}, {
+      {RGBColor[1, 0, 0], PointSize[Medium], AbsoluteThickness[1.6], Opacity[
+       0.4], PointBox[{1, 2, 3, 4}]}, 
+      {RGBColor[1, 0, 0], PointSize[Medium], AbsoluteThickness[1.6], Opacity[
+       0.5], PointBox[{11, 12, 13, 14, 15, 16, 17, 18, 19, 20}]}, 
+      {RGBColor[1, 0, 0], PointSize[Medium], AbsoluteThickness[1.6], Opacity[
+       0.6], PointBox[{21, 22, 23, 24, 25, 26, 27, 28, 29, 30}]}, 
+      {RGBColor[1, 0, 0], PointSize[Medium], AbsoluteThickness[1.6], Opacity[
+       0.7], PointBox[{31, 32, 33, 34, 35, 36, 37, 38, 39, 40}]}, 
+      {RGBColor[1, 0, 0], PointSize[Medium], AbsoluteThickness[1.6], Opacity[
+       0.8], PointBox[{41, 42, 43, 44, 45, 46, 47, 48, 49, 
+        50}]}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}}}], {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Epilog->{
+    InsetBox[
+     BoxData[
+      FormBox[
+       StyleBox["\"c = 0.0\"", 12, StripOnInput -> False], 
+       TraditionalForm]], {4, 1.4}], 
+    InsetBox[
+     BoxData[
+      FormBox[
+       StyleBox["\"c = 0.1\"", 12, StripOnInput -> False], 
+       TraditionalForm]], {5.1, 0.9}], 
+    InsetBox[
+     BoxData[
+      FormBox[
+       StyleBox["\"c = 0.2\"", 12, StripOnInput -> False], 
+       TraditionalForm]], {7, 0.6}], 
+    InsetBox[
+     BoxData[
+      FormBox[
+       StyleBox["\"c = 0.3\"", 12, StripOnInput -> False], 
+       TraditionalForm]], {7, 0.3}], 
+    InsetBox[
+     BoxData[
+      FormBox[
+       StyleBox["\"c = 0.4\"", 12, StripOnInput -> False], 
+       TraditionalForm]], {3, 0.01}], 
+    InsetBox[
+     BoxData[
+      FormBox[
+       StyleBox[
+        RotationBox["\"Monogamy\"", BoxRotation -> 1.5707963267948966`], 12, 
+        StripOnInput -> False], TraditionalForm]], {0.75, 1.2}]},
+  Frame->{{True, True}, {True, True}},
+  FrameLabel->{{
+     FormBox[
+      StyleBox["\"Production rate of genotype DD\"", 
+       GrayLevel[0], 16, StripOnInput -> False], TraditionalForm], None}, {
+     FormBox[
+      StyleBox[
+      "\"Degree of polygamy, \
+\\!\\(\\*StyleBox[\\\"r\\\",FontSlant->\\\"Italic\\\"]\\)\"", 
+       GrayLevel[0], 16, StripOnInput -> False], TraditionalForm], None}},
+  FrameStyle->Directive[
+    GrayLevel[0], 
+    Thickness[0.002]],
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{{1}, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0], 
+    Thickness[0.003]],
+  Method->{
+   "OptimizePlotMarkers" -> True, "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0, 10.}, {-0.1, 2.1}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {0, 0}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.857462987739675*^9, 3.857463025068838*^9}, {
+   3.857463096881188*^9, 3.8574631188151093`*^9}, {3.857463156650914*^9, 
+   3.857463177536298*^9}, 3.8574632270846853`*^9, {3.857463569909183*^9, 
+   3.85746360852776*^9}, {3.85746364246404*^9, 3.8574636461716957`*^9}, {
+   3.857463746644606*^9, 3.8574637796480217`*^9}, 3.857463812839849*^9, {
+   3.857469273297433*^9, 3.8574692879536743`*^9}, 3.857804508574806*^9, {
+   3.857804539852297*^9, 3.8578045642065563`*^9}, {3.8578046016937323`*^9, 
+   3.857804615058608*^9}, {3.857804657872448*^9, 3.857804668953587*^9}, {
+   3.8578047991203527`*^9, 3.857804819143715*^9}, {3.857804869595954*^9, 
+   3.857804894375723*^9}, 3.857805050792438*^9, {3.857805089191784*^9, 
+   3.857805168483268*^9}, {3.8578052102936993`*^9, 3.857805254839467*^9}, {
+   3.857805298752598*^9, 3.85780535424153*^9}, {3.857811520430971*^9, 
+   3.8578115239811277`*^9}, {3.8578140896591387`*^9, 3.857814213514841*^9}, {
+   3.857814316984438*^9, 3.857814330408218*^9}, {3.8578837934697866`*^9, 
+   3.857883799801105*^9}},
+ CellLabel->
+  "Out[134]=",ExpressionUUID->"6dcb02fc-fdea-4933-8e7b-63c185009dbe"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"fwd", "=", 
+       RowBox[{"1", "-", "c"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"fdd", "=", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "-", "c"}], ")"}], "^", "2"}]}], ";", 
+      RowBox[{"(", 
+       RowBox[{"r", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"fdd", " ", "xdd"}], "+", 
+           RowBox[{"fwd", " ", "p", " ", "xwd"}]}], ")"}], "^", "2"}], " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"fdd", " ", "xdd"}], "+", 
+           RowBox[{"fwd", " ", "xwd"}], "+", 
+           RowBox[{"fww", " ", "xww"}]}], ")"}], "^", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"-", "1"}], ")"}], "+", " ", "r"}], ")"}]}]}], ")"}]}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"c", ",", "0", ",", "0.2", ",", "0.01"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"r", ",", "1", ",", "20", ",", "1"}], "}"}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.857464115257058*^9, 3.857464134447543*^9}, {
+  3.8574644614061537`*^9, 3.857464501144005*^9}, {3.857464540821632*^9, 
+  3.857464545342452*^9}, {3.85746458753259*^9, 3.857464597766*^9}, {
+  3.857464768127947*^9, 3.857464772581458*^9}},
+ CellLabel->
+  "In[111]:=",ExpressionUUID->"2d1cdebc-bd78-48e5-88dc-8e8350b6ad9d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListDensityPlot", "[", 
+  RowBox[{"data", ",", 
+   RowBox[{"ColorFunction", "\[Rule]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Directive", "[", 
+       RowBox[{"Red", ",", 
+        RowBox[{"Opacity", "[", "#", "]"}]}], "]"}], "&"}], ")"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8574638803580923`*^9, 3.857463885293086*^9}, {
+  3.85746393609974*^9, 3.857464026377445*^9}, {3.8574640583688173`*^9, 
+  3.8574640843684597`*^9}, {3.857464139558992*^9, 3.857464150975211*^9}, {
+  3.8574642413189163`*^9, 3.857464271578123*^9}, {3.857464397591714*^9, 
+  3.857464426366105*^9}, {3.857464657564123*^9, 3.857464663041708*^9}, {
+  3.857464709519556*^9, 3.857464710918742*^9}, {3.857464777781478*^9, 
+  3.857464778335956*^9}},
+ CellLabel->
+  "In[113]:=",ExpressionUUID->"9f1bb477-fa2f-4814-b4d1-019009ae2f2e"],
+
+Cell[BoxData[
+ GraphicsBox[GraphicsComplexBox[CompressedData["
+1:eJx12D+IHFUcB/D1OJMrTtli0S0WshmHYZgM47w/aYKwU4lgJxgsFOQgIpFE
+EA0BsdKQ2KlNYiEigoJokUJtxEoIojaSQiKIYKyUYCGxODEiOgv5yKZ5fI67
+sPe7937v+3uH95595MTWZDJ5/47J5J/133+/rW5fJ8Pt3sFTPMNzvMBLXOAS
+V7jGDfb3cN3BUzzDc7zAS1zgEle4xg1ucYd77N/N39t1imd4jhd4iQtc4grX
+uMEt7nCPA4444Yzd5+4T6+Y6w3O8wEtc4BJXuMYNbnGHexxwxAlnbF/wXLnP
+rJvrHC/wEhe4xBWucYNb3OEeBxxxwhnbR+1Dnkv3mXVzXeAlLnCJK1zjBre4
+wz0OOOKEM/besW/bxzyX7jPr5rrEBS5xhWvc4BZ3uMcBR5xwxt7T3nP2ffuY
+59J9Zt1cC1ziCte4wS3ucI8DjjjhjM015gLvSfu+fcxz6T6zbq4lrnCNG9zi
+Dvc44IgTztgcaI4yV3hP2vftY55L91mBXStc4wa3uMM9DjjihDM2N5s7zWHm
+Cu9J+759zHNZYOvmWuMGt7jDPQ444oQzds4wp5tbzWHmCu9J+759rMDuM+vm
+2uAWd7jHAUeccMbOZc415nxzqznMXOE9ad8vsOfSfWbdXFvc4R4HHHHCGY/1
+c+5zDjLXm1PNXeYI70X7vH3Lc+i+sk7thrXDPQ444oQzHuvnnOzc6Bxkrjen
+mrvMEd6L9nn7lufQfWWdug1rjwOOOOGMx/r5ruCc7dzoHGSuN6eau8wR3ov2
+efuW59B9ZZ36DWvAESec8Vi/8f8Z6+e7hHO2c6NzkLnenGruMkd4L9rn7Vue
+Q/eVdQob1ogTznis3/hzY/18x/FdwjnbudE5yFxvTjV3mSO8F+3z9i3PofvK
+OsUNa8IZj/Ubv2+sn+9evuP4LuGc7dzoHGSuN6eau8wR3ov2efuW59B9ZZ3S
+hjXjsX7j1yd8n++GvoP5ruM7hXO3c2SBzfnmVnOYucJ70r5vH/Ncus+sm+tY
+v6P/eazf6B08xTM8xwu8xAUucYVr3OAWd7jHAUeccF77zIlLl09//v8cuPvT
+fWce/e73da65eddr18M9++t7+vs3jr711K+3VgfPXbz3g23v7TCc/HC1m49t
+rT/PE5c//eaj3e315zn/2dOHv33lzvXnOXu9fuHljw8Mr145dejBG+3w0AOn
+9/vn/li98/ju63f/ef9w8Oe9C8//eGv14pcn3752PAzXHj6+f/WTreHU1R9m
+e2/G4Zl3b743/Wp7eOncY1cOfZ2GX458ceyvJw8MfwMRvKNZ
+   "], {
+    {GrayLevel[0.8], EdgeForm[None], 
+     GraphicsGroupBox[{PolygonBox[CompressedData["
+1:eJxNmXf8V2UVx+914EJkTwFBpgz1J3soW5myp6A/BATZS0CGyJA9BGSYoCjg
+ygJLRU1TQ9NMNHNUGqKREaQYIaFp+Ly77+d1++N0ep7znHM+n3Pv78t9PlYb
+PrH3hDOSJDkS/ufM4C8KlgZjr7ie/VLBzg5WJFjJYGe5Lu3eOcHKBzs/2AXB
+SpjHubLBzg12XrByes51CHZ5sCuCVTCvaLCqwYqJpbq16HmpHiyXGAdjGfvT
+o4ZxcNW2Nz0rWvvCYDWNk1dLz7k6noVHXT24LtNTo5k46FM/WKVgFwdroK8c
+rLlx+lwVrIqcGou7WrBG7rFuKk/qNjFeXV9c/i2sB9629qbnNeKrF6yVnOHR
+Wg+PluYRu9q9mFNRDm1cU7edtRsGa6/nOd0WrDDY8GAz9DcHu06ecOqsh2s3
+uTGzrnJj3d095tRL3ODtYh7nrpcz2HvqOXdtsAL79TYPTn2dBTwGyAHsA/W8
+a/2MM78e9qfHIOMdgw2VDzz6WJu6Q4J1sv8Nes4N8yzYb9TD9SY9Mxgjvn7O
+rLv9b9bD9Vbj/YONcA/eo5wRXEe6x3q0+Kh7i/E+cuDv6cpgY63HPKaKFYyT
+5QDX8c6IGUwMNliu48wjNsk9cgrlBIcp1qDuNGvDe7q+0P5tfR4z5Qy/Z4Pt
+CLYz2O1yg+tcuTGzOXJjPc895rQw2ATxzjaPc/PlDPY79fB7ONi6YOuDLTIP
+Tnc5C3gskwPYl+t535cYZ3532J8eK4zzd7A62Cx5LLY2dVcah/cqPefWeBbs
+a/VwvVvPDH4kviXinmf/DXq43md8abB73IP3ZmcE103BFri+V3zU3WJ8sflT
+5b/V9TKfzxoxPigHuN7vjJjBA3q4bjOP2Hb3Vjn7uXJ4yBrU3WlteO/Sc/aP
+wfYFe9V58b7wfjwebKOcfqyH60/lxsx+IjfWu91jTj8XN3ifMI9zT8oZ7D/T
+c+5RZ81cnzIPTs84C3g8JwewP6/nXdtrnPntsT89fmH8kWAvyQceT1ubui8Y
+p/8vgz3muZc9C/ZX9HD9lZ4Z/FZ8e53dbvu/pofrW8b5+/u1e/B+wxnB9XX3
+WL8pPur+xvjTYlzvjPZbj3l8IFYwvicHuL7jjJjB7/Rwfds8Yr8P9qI5++QE
+h/etQd0PrQ3vP+g5+yc5w/UjPfw+1sPpgDzh8Wf3WB+UJ/P7xDjrT91jZueH
+j6Kvgz8Z7JC44fRXPZz+Fuxdefxd/mA/Jj5wfSFu3vEjxpnZUT38/uJM6fEP
+98g5bG3qfmkN6n5lbbj+Uw+/z8ROrePuMYN/6T+Rz6ee/bee/qfFBy4+CI+K
+5b9yI/aNs2AGp8xj/Z2zAO9/gn3u+oI060efNM3qMY9z0wzTiWBnpNke/M5M
+M3/M2Cc+q3PSjA85Z6cZf3gXSTNP7Kw0yyN2Xprlf60dlPP3YoRP0TTDBY8G
+4f+XD1Yh2EXBvpVHyTTLYQYl0own61JptsfMyqUZB7AXT7M8zpVJsznCu6ye
+czU9V8Ke5IG9Yppxg1PlNJsRPKroeR8rGWcepdOsPz2qGmfelwYrJo8K1qbu
+JcbhXU1/YbAangVTLXHBm+9rvpP5bq4nB7jWSTP+9K+rh2tt84hd5h45V4j7
+4mD1rQHvhuKD9+X6SmI65bt2pXnMo4WzA2MzeYK9kfzh11gPv6ucHbGmwaqb
+U2A9Ys2tQd2W1oZHKz1cW+vherUeftfomU1bufEedZAPvNvLk3VH9+DUWdzg
+bWce564VH9iv03NuQrBBwQYH6xqsiZy6Owt49JQD2Hvpwd7DOPPrZH969DYO
+p37B2sijm7Wp28c4XPvqOdffs2AfoIfrQD0zGC6+HuLuaP8herjebPz6YDe4
+B+8bg3WR61D3mFmh+Kh7k/Fu5reQ/wjXzGOsWME4Rg5wHeWMmMEteriONI/Y
+aPf6OvsOcrjVGtQdZ214j9cPcka8F7wTE+UP78nyhNNt8mFOU4MNk/c0Pfwm
+mUfOdPfImS0HsM+wBrOcJX943K7n3EzjxOaYB79F4qPPAjnwrt0hT+Y3Xw/X
+ec6R2J3ukTPXesQWWoO6i60N7yXBpsi1iL8r3NuXugfv5fJkNuvtB5aV8oTH
+Kj1cNxgH42r34L3WGcF1jXus14mVuncbZ73M/vS+x3rwQ8/gLl48+5n9n/6A
+TrHJecF1s55ZbjSP2Bb3mMEKOcEh6izUQispaY+znQdrfvP4jeffADSOsv4W
+s0eM30lqVEsyPYG7OvdZ7r1oKmgXUZvBo3Ggg3Dvr5jk2kp1cVADbaKo8ZiP
+blAnyTWRusbrueYZolGgfUSNgDsS99GOYipm7Sryq2HvqMXUlF9t1yWSXAsp
+Z39i3P+5f3MP35ZmusvWNNdi6lsXnaGp/cgpsH8j13Bt7JoeTVyDq7n5hfKY
+LpamngNrC8+BtaVrerdNMq0BrK2MRV2GNXgbirWSOXGO6A1Xu27juq57rc1p
+Z4+o0bDm/s9dOeoB+Kgf4Eea39u9AufXSc5oF1G/6ex84cp9v6s4+tqHuXQ3
+1sR4F2uhFQxOcq1kiLWGugY3ugB6B9/sfMPyLbs9zd6VXWk2IzD2dAb97A3P
+AeZHfWeAs+kjN96zQcaifhT1JHzUfnrIgdrc68dYd6xr6o5zjcbBHXlKkms3
+w8U0xrl3d6/Qnsw7ajkjzMHQAfjbQC+ZZt1u5t2U5PpR1JNuTHKdaZhzJD7d
+fGaNpjHB+aI9TJL/eDkMFftkn8ckc+IdifvDPp8Ddw3ur9wTn5Eb9/eox+Bn
+y3ueMXqjMSxIcv1lvjNA65jlTO8wZ6xx1qOsxznu/9yRd4lvkXX5+0NnWC5n
+dIalSa7XLDMfXWG1/BabH/WXleJY7ZpZ3OW5GcZXOKclxqJGsybJ9Y775bBe
+vJxDZ7hXTmgGG5wFGsVGOWx2HXWc9fYmL+oxWzxH//usC8+truG5zTV4t4sJ
+Pg+6Xi7GbUmuK62V90Oei5rLTp/fOvfgucNza42znioOcI1wjjPl8IjPDB7c
+2aMGg39CDruNgQtdIWot+CeTXNN5XJ57zNlqfI9zecJzzO9Re8P/KeuCA23h
+ebGjLTyb5BrNc+a/nGSaAvN62ny0FrSHF8Xxkmvm9UyS6x4v2CNqMS8nuRbz
+SpJrHO+Inb+x16yBnvCm3Pjt25fkGs2rzuN1c8CEFhG1mTeMbRTfY2J603M7
+5LpXe8t+cEZL2C83NIR35fae6+fF+7Y19pvPDN73XNRcPvRZ7nMP/h947hXj
+rPkW5/uU79Soy/Bbz7c837R848IHXeJjeRxMcg0Gf0AOnxqLmssh53HAfPCi
+P3wmh0Ouue9zF+bODGd0iM/lw73/sHjRIo7K7wvX8DniubesDQ5+I7/0XNRc
+vnKOh+0Bz2Oe+8j4MbEeNydqMcflesI1/dATvrffSXlEjeakuE57Dp6njMEN
+zeFbZ/CNscPWi9rMd56L2tP/az2nxcT3JfoC2NEM0A7gjG6BfhE1GtbMiz3y
+4clZYgfFfiLJNRpqwfNcv2uJnef3LdzQJXhm8EGXYA0HtADWYEeXQKOAEzoD
+azijXaB3wI04a2aEDlEyzfWXMuIu5xrOaBel5EC8tPloApfar6ZrOKBRVBB3
+Zb/Fo0ZT2dlV8hyzKG8/uFX1XDFrV3e+FTwH50s8FzUa1lGDaCXnWmKKekcj
+saNF1JVbPdelzK+d5npNHTHV91zUXxqK/QrXYGrguQrGWcf/plvW51BbTHBD
+ryiQGxpCE7k2c11VvFc5uyvtx3ybey7qLy2daYHn4NzCc7WMt0hzXaZ1musy
+rOPdlfshd3LupOPFhG7QxX5oCd3M4b7fW55oGm2dBXf/9s6CvTbi7misofF2
+8kOruC7NdZM+8u9m73rWII42MFF83PO5K08y3s98eKJp9Ehzfaens+ghh9Zi
+7+VseprD/ZZ7791pritd60w7yYEa6APDzRnhmhojXfd3premuY4z2N7kFVpr
+sPOmz9A013VuMKfANTXQTsZZt4N5UUMamOba0oA015z6O5eouYxLcx1nlPNC
+hxjtLEbJoZ/Yx/g8RpvD8+DfK/59muOc0A/QDNAOVqe5LhN1GvwUOXOvj9rM
+dM8xjxnGhvg8J6a5LjNLXLPTXJtYa79bxDHbHDSEhWLnXZ4nbzSGqMHgedcn
+eHaB/OZaa4x5c8Wy2LpwQJe5y+c9U9wjxMj6wTT7b8sPB/9AmmkNO53BUvO5
+h3O/3SEWdJCoo+A3OAt0kOX2WOn6vjS7wz8kJnSTzc5xmT1m+Ryi9rPK/OnW
+WybnTfaGK/rRujTXaDY5vw3GfgAEqsbc
+        "]], 
+       PolygonBox[{{415, 46, 29, 414}, {423, 49, 48, 417}, {419, 28, 27, 
+        411}, {411, 27, 13, 410}, {421, 47, 46, 415}, {422, 48, 47, 416}, {
+        420, 29, 28, 412}}]}]}, {}, {}, {}, {}},
+   VertexColors->{
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.06041066813472748]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1363558685465746]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.21230106895842174`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.28824626937026887`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.36419146978211603`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.44013667019396313`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.5160818706058102]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.5920270710176574]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.6679722714295045]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.7439174718413517]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.8198626722531988]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.8958078726650459]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.9717530730768931]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.05815688058456829]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.13037937794987994`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.20115492010548605`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.270505175510248]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.33845152443090565`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.4050150625342827]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.470216604436515]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.5340766872098008]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.5966155738471687]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.6578532566857502]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.717809460789041]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.7765036472886271]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.8339550166858503]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.8901825121138761]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.9452048225606292]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.9990403860530486]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.055951776565955125`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.12459769607099838`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.19048786984028346`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.25370469936110795`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.3143283996849822]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.37243705377942604`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.42810666558313976`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.48141121179461616`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.5324226924235799]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.5812111801339681]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.6278448684065198]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.6723901185483981]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.7149115055766465]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.7554718630016752]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.794132326536369]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.8309523767558339]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.8659898807322228]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.8993011326685288]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.9309408935546859]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.9609624298687897]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.053794679407152296`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.11900573591737848`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.18028210106656264`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.23779997350071358`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.29172855641816986`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.34223031767612755`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.3894612406174555]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.4335710659395731]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.4747035249162445]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.5129965642725706]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.5485825630032612]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.5815885414143932]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.6121363626593282]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.6403429270302415]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.666320359257808]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.6901761890629766]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.7120135251964445]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.7319312231933971]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.750024047063314]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.7663828251271149]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.051684916993136154`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.11359851106765975`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.17052035657403852`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.22274803115110134`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.27056339887903097`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.3142333870907058]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.35401072634245145`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.39013465524217783`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.4228315917562331]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.45231577254306893`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.47878986179182725`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.5024455309770903]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.5234640108771389]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.5420166171420177]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.5582652506393753]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.572362873750319]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.5844539637342833]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.5946749442310422]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.6031545959194073]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.6100144473057266]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.04962182176559507]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.10837113432744283`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.16118592471763757`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.20850773597956698`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.25074903864046305`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.28829502213984215`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.3215052803795851]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.3507153974764994]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.37623843945620455`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.39836635730410525`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.4173713064840431]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.4335068877469591]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.44700931377962744`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.45809850598637253`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.466979125453813]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.4738415419193195]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.4788627443472724]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.4822071965126726]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.4840276407985242]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.48446585323104663`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.04760473072292948]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.10331881639417281`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.15226262537701102`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.19503971410163737`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.23220606858748793`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2642736119634026]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.29171346397525655`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.31495896952029334`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.33440851210107103`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.35042812702149484`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.3633539281479217]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.3734943611251154]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.38113229506557933`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.38652696391744]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.38991576795679417`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.3915159451417173]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.39152612140365245`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.3901277483345373]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.38748643615188794`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.38375318928644025`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.04563298542025179]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.09843686453113595]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.14373479619257712`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.18230628822952719`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.21485934657039166`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.24203660851924402`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2644209716052302]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.28254075831365344`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2968744538499371]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.3078550511771436]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.3158740348815311]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.321285032941685]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.3244071631892825]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.32552809913894853`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.32490687791744066`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.32277647122608977`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.31934613861348526`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.314803580807169]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.3093169094437375]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.30303644823713416`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.04370593196938651]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.0937206812505701]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1355872790743808]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1702714139107874]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.19863778836214113`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2214599908494608]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.23942944224741392`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2531635016751354]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2632128081449497]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.27006792792421835`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2741653712199069]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2758930360989437]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2755951323623814]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.27357663335421417`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2701072993666382]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.265425312366184]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2597405581762344]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2532375889805834]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2460782960321189]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2384043197350479]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.04182292103887004]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.08916576300588794]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.12780540698008191`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.15890061780294418`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.18347416957047316`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.20242775833443793`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2165553474709104]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2265551057183398]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.23304008189614325`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2365477458961438]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.23754851254049159`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.23645335318291721`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.23362058937053737`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.22936195336822127`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.22394799177484756`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2176128807385929]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.21055871432353623`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.20295932131720598`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.19496366013039587`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.18669883636534287`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.03998330785395091]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.0847676988930145]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.12037499095841211`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.14816093793100973`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.16930493616622647`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1848314515154675]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1956289517531792]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.2024666264741603]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.20600914530386857`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.20682967744305739`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.20542137078149633`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.20220746673700735`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.19755020731364964`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.191758673365798]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1850956774701327]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.17778382093712172`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.17001081215163247`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.16193413245296912`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.15368512599977427`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.14537258138266368`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.03818645219658963]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.08052216936083745]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.11328230745446272`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.13802086587580348`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.15607002330036165`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.16856969912862538`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.17649334068807143`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.18067040413428567`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.18180594020376672`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1804976459602823]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1772506996480768]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.172490657012542]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.16657465334841975`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.15980112553640924`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.15241824194490383`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1446312048751965]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1366085698369608]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1284877080217657]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.12037952260079085`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1123725156485097]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.0364317184054588]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.07642494493077118]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.10651408587319305`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.12845029084207596`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.14371268209271068`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1535477900521914]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.15900351298601717`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.16095833909296434`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.16014647188466194`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.15717941492548518`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.15256449825623164`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1467207646856904]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.13999257837163254`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1326612696481283]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.12495508794801541`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1170576980964265]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.10911542349705107`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.10124341217239521`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.09353087770786281]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.0860455464120514]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.03471847537594297]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.07247188492543381]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.10005749639757418`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.11942044555645953`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.13217931408580919`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.13967726892719143`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.14302553239428217`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.14314029967918718`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1407740612476388]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.13654215080813514`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1309452219483208]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.12438825549553834`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.11719661287843419`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1096295762594891]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.10189175226388658`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.09414266127337609]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.08650478721335021]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.07907032244153281]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.07190680780340136]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.06506183833955424]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.03304609656013872]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.06865893620643825]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.09390013805780885]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.11090385394629373`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1214193130672076]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.12687555426572555`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.12843573588051713`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.12704265214291557`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.12345683595475168`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.11828841618790725`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.11202371789376442`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.10504744122987314`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.09766112545271699]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.09009849453525896]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.082538187901973]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.07511430092379383]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.06792509304401803]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.061040164893996635`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.054506357955373744`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.04835258991529781]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.03141395996685474]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.06498213192129643]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.08803002704809301]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.10287428055137349`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.11138491397342143`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1150655779146871]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.11511999462726699`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.11250690408917927`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1079854408674943]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.1021525532467764]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.09547381114329533]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.08830872715888671]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.08093152893645374]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.07354816502049176]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.06631019586506083]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.05932611239692809]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.052670533206376005`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.046391655119218896`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.040517268175927344`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.03505959286865697]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.029821448161611613`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.06143759025943653]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.08243558528740905]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.09530668162166442]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.10203104859819065`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.10417544479335626`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.10297302457922611`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.0993884531451713]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.09417094960699926]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.08789742130962593]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.08100747410803416]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.0738317700698067]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.06661494467583491]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.0595340810418592]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.0527135613174491]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.04623696889775472]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.04015659413210791]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.034500996447820224`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.029280993584397598`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.024494380927469223`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.028267948266642064`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.058021513217334605`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.07710562922087075]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.08817715785500833]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.09331520783697085]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.09413811187223337]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.09189774346924905]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.0875554332000339]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.08184296048803114]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.07531145532515379]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.06837051905238142]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.06131944364792771]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.05437205770756988]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.04767644036836963]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.04133051022170997]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.03539430525187659]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.029899614191222154`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.02485749297197664]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.020264096900640058`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.016105175454760666`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.026752851960890778`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.05473018537275848]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.07202935885815848]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.08146290872979908]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.08519731020856545]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.08489108540740899]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.08180467142390448]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.07688765107694988]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.07084786139476143]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.06420601512576789]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.05733875918343122]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.050512519226981065`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.043910015644954455`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.0376509620145133]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.031808155570189615`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.02641992645732786]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.021499717309245527`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.017043407841370907`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.013034873298346851`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.009450164725088311]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.025275555480014478`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.051559972668125995`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.0671963470456155]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.07514218838856797]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.0776395764035688]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.07637613548985867]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.07261137241515904]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.0672756069844531]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.061047249385242086`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.05441299800345452]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.04771458934535247]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.04118498002585435]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.03497624163328964]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.029180972173302025`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.02384864826758923]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.01899804071534491]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.014626576688800916`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.01071734213024154]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.007244267760729889]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.0041759234328244705`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.023835459616381914`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.048507321202976225`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.06259652896859733]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.06919426302934677]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.07060640961778787]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.06853902701231009]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.06424193398196146]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.05861959255036907]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.052316491940032545`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.04578268960801047]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.03932394223611011]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.033139896018255115`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.02735304732091611]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.02203058872464706]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.017200787452991348`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.012865176217625536`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.009007549147089315]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.005600530784669719]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.0026103107514832257`]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[0.]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[1.]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[1.]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[1.]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[1.]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[1.]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[1.]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[1.]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[1.]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[1.]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[1.]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[1.]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[1.]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[1.]], 
+     Directive[
+      RGBColor[1, 0, 0], 
+      Opacity[1.]]}],
+  AspectRatio->1,
+  AxesOrigin->{Automatic, Automatic},
+  DisplayFunction->Identity,
+  Frame->True,
+  FrameLabel->{None, None},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultColorFunction" -> 
+    "M10DefaultDensityGradient", 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "GridLinesInFront" -> 
+    True},
+  PlotRange->{{1., 20.}, {1., 21.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.02]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.857464013940082*^9, 3.8574640288829937`*^9}, {
+   3.8574640661771193`*^9, 3.857464085479353*^9}, {3.857464140567503*^9, 
+   3.857464152177116*^9}, {3.857464241760873*^9, 3.857464261611326*^9}, 
+   3.857464426754878*^9, {3.857464470699315*^9, 3.857464502713738*^9}, 
+   3.857464546670133*^9, 3.857464601778751*^9, {3.857464658580798*^9, 
+   3.8574646635333033`*^9}, 3.857464711418375*^9, {3.857464774183601*^9, 
+   3.8574647786873713`*^9}},
+ CellLabel->
+  "Out[113]=",ExpressionUUID->"fe0f0e95-8f39-4cf2-b334-b67661f245db"]
+}, Open  ]]
+},
+WindowSize->{808, 872},
+WindowMargins->{{542, Automatic}, {Automatic, 100}},
+FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"3d2417ba-a39f-4b94-8f0e-cc4ec7f464b5"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 552, 12, 73, "Input",ExpressionUUID->"b4289d31-84e9-4dfa-96d8-648caaa62330"],
+Cell[1113, 34, 682, 22, 136, "Input",ExpressionUUID->"82c71a7e-2728-4eb0-83d7-fc7e1b3df677"],
+Cell[1798, 58, 5353, 135, 367, "Input",ExpressionUUID->"5705c4e9-2bb4-46a9-ba84-16de553acbee"],
+Cell[CellGroupData[{
+Cell[7176, 197, 4970, 125, 325, "Input",ExpressionUUID->"6b917a80-0c60-4791-9c11-b0303004c46b"],
+Cell[12149, 324, 5749, 126, 292, "Output",ExpressionUUID->"6dcb02fc-fdea-4933-8e7b-63c185009dbe"]
+}, Open  ]],
+Cell[17913, 453, 1442, 40, 94, "Input",ExpressionUUID->"2d1cdebc-bd78-48e5-88dc-8e8350b6ad9d"],
+Cell[CellGroupData[{
+Cell[19380, 497, 837, 18, 30, "Input",ExpressionUUID->"9f1bb477-fa2f-4814-b4d1-019009ae2f2e"],
+Cell[20220, 517, 41244, 1409, 379, "Output",ExpressionUUID->"fe0f0e95-8f39-4cf2-b334-b67661f245db"]
+}, Open  ]]
+}
+]
+*)
+

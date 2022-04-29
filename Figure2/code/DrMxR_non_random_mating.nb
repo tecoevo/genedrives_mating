@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     59423,       1420]
-NotebookOptionsPosition[     58936,       1403]
-NotebookOutlinePosition[     59334,       1419]
-CellTagsIndexPosition[     59291,       1416]
+NotebookDataLength[     59565,       1419]
+NotebookOptionsPosition[     59077,       1402]
+NotebookOutlinePosition[     59476,       1418]
+CellTagsIndexPosition[     59433,       1415]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -28,7 +28,7 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", 
        RowBox[{
-        RowBox[{"StreamDensityPlot", "[", 
+        RowBox[{"StreamPlot", "[", 
          RowBox[{
           RowBox[{"{", 
            RowBox[{
@@ -51,13 +51,11 @@ Cell[BoxData[
           RowBox[{"StreamStyle", "\[Rule]", 
            RowBox[{"{", 
             RowBox[{
-             RowBox[{"Arrowheads", "[", "0.025", "]"}], ",", 
-             RowBox[{"Darker", "[", "Gray", "]"}]}], "}"}]}], ",", " ", 
-          RowBox[{"StreamPoints", "\[Rule]", "Automatic"}], ",", 
+             RowBox[{"Arrowheads", "[", "0.03", "]"}], ",", "Black"}], 
+            "}"}]}], ",", " ", 
+          RowBox[{"StreamPoints", "\[Rule]", "40"}], ",", 
           RowBox[{"StreamColorFunction", "\[Rule]", "None"}], ",", 
-          RowBox[{"ColorFunction", "\[Rule]", "\"\<LightTemperatureMap\>\""}],
-           ",", 
-          RowBox[{"ColorFunctionScaling", "\[Rule]", "True"}]}], "]"}], ",", 
+          RowBox[{"RegionFillingStyle", "\[Rule]", "None"}]}], "]"}], ",", 
         "leftri", ",", "\[IndentingNewLine]", "rightri", ",", 
         "\[IndentingNewLine]", "downl", ",", "Tri", ",", "HWparabola1", ",", 
         RowBox[{
@@ -762,8 +760,7 @@ Cell[BoxData[
           RowBox[{"PlotStyle", "\[Rule]", "Black"}]}], "]"}]}], ";"}], 
       "\[IndentingNewLine]", "}"}]}], ",", 
     RowBox[{"AppearanceElements", "\[Rule]", "All"}], ",", 
-    RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}], " "}]], "Input",\
-
+    RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}], " "}]], "Input",
  CellChangeTimes->{{3.799079163667281*^9, 3.7990791798456*^9}, {
    3.799079539635455*^9, 3.7990801198373528`*^9}, 3.7990802866871758`*^9, {
    3.799080352813044*^9, 3.799080353139764*^9}, {3.799080495226598*^9, 
@@ -777,21 +774,23 @@ Cell[BoxData[
    3.8575577511548023`*^9, 3.857557777887848*^9}, {3.857557870179882*^9, 
    3.857557875511668*^9}, {3.8575579810411882`*^9, 3.857557981586638*^9}, {
    3.8575580457861977`*^9, 3.857558046428336*^9}, {3.85755870302017*^9, 
-   3.857558703402319*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"fe78f92a-3b8d-4e60-93d1-acc9fb235b17"],
+   3.857558703402319*^9}, {3.8577464796917553`*^9, 3.857746480815192*^9}, {
+   3.8577471289297132`*^9, 3.857747129243786*^9}, {3.857747560844336*^9, 
+   3.8577475959998903`*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"fe78f92a-3b8d-4e60-93d1-acc9fb235b17"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`d$$ = 1., $CellContext`e$$ = 
+   DynamicModuleBox[{$CellContext`d$$ = 0, $CellContext`e$$ = 
     0, $CellContext`ffdd$$ = 1, $CellContext`ffwd$$ = 1, $CellContext`ffww$$ =
      1, $CellContext`g$$ = 0, $CellContext`h11$$ = 1, $CellContext`h12$$ = 
-    0.1, $CellContext`h13$$ = 0.1, $CellContext`h22$$ = 
-    1, $CellContext`h23$$ = 1, $CellContext`h33$$ = 1, $CellContext`p$$ = 
-    0.5, $CellContext`\[Nu]$$ = 1, $CellContext`\[Omega]$$ = 1, 
-    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+    1, $CellContext`h13$$ = 1, $CellContext`h22$$ = 1, $CellContext`h23$$ = 
+    1, $CellContext`h33$$ = 1, $CellContext`p$$ = 0.5, $CellContext`\[Nu]$$ = 
+    1, $CellContext`\[Omega]$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
       Hold[
        Style["Non-Random mating", 16, Bold]], 
       Manipulate`Dump`ThisIsNotAControl}, {{
@@ -881,7 +880,7 @@ Cell[BoxData[
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, "Body" :> Show[{
-         StreamDensityPlot[{
+         StreamPlot[{
            $CellContext`xdotcart[$CellContext`xcart, $CellContext`ycart, \
 $CellContext`ffww$$, $CellContext`ffwd$$, $CellContext`ffdd$$, \
 $CellContext`p$$, $CellContext`d$$, $CellContext`\[Omega]$$, $CellContext`\
@@ -897,10 +896,9 @@ $CellContext`h23$$, $CellContext`h33$$]},
           
           Element[{$CellContext`xcart, $CellContext`ycart}, $CellContext`\
 \[ScriptCapitalD]], StreamStyle -> {
-            Arrowheads[0.025], 
-            Darker[Gray]}, StreamPoints -> Automatic, StreamColorFunction -> 
-          None, ColorFunction -> "LightTemperatureMap", ColorFunctionScaling -> 
-          True], $CellContext`leftri, $CellContext`rightri, \
+            Arrowheads[0.03], Black}, StreamPoints -> 40, StreamColorFunction -> 
+          None, RegionFillingStyle -> 
+          None], $CellContext`leftri, $CellContext`rightri, \
 $CellContext`downl, $CellContext`Tri, $CellContext`HWparabola1, \
 $CellContext`sol1 = ReplaceAll[{$CellContext`xcart, $CellContext`ycart}, 
             Chop[
@@ -986,7 +984,7 @@ $CellContext`h22$$, $CellContext`h23$$, $CellContext`h33$$] ==
          "FramedPalette"]}, 
       "Options" :> {AppearanceElements -> All, ControlPlacement -> Left}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{815., {366., 371.}},
+     ImageSizeCache->{815., {267., 273.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1035,18 +1033,17 @@ $CellContext`h22$$, $CellContext`h23$$, $CellContext`h33$$] ==
            Blank[]], 
           Pattern[$CellContext`h22, 
            
-           Blank[]]] := $CellContext`h11 $CellContext`ffww $CellContext`ffww \
-$CellContext`xww $CellContext`xww + $CellContext`h12 (1 - $CellContext`p) (
-           1 - $CellContext`e/
-           2) $CellContext`ffww $CellContext`ffwd $CellContext`xww \
-$CellContext`xwd[$CellContext`xww, $CellContext`xdd] + $CellContext`h12 (
-           1 - $CellContext`d) (1 - $CellContext`e/2) (
-           1 - $CellContext`p) $CellContext`ffww $CellContext`ffwd \
-$CellContext`xww $CellContext`xwd[$CellContext`xww, $CellContext`xdd] + \
-$CellContext`h22 (
-           1 - $CellContext`d) (
-            1 - $CellContext`p)^2 $CellContext`ffwd $CellContext`ffwd \
-$CellContext`xwd[$CellContext`xww, $CellContext`xdd] \
+           Blank[]]] := ((($CellContext`h11 $CellContext`ffww) \
+$CellContext`ffww) $CellContext`xww) $CellContext`xww + ((((($CellContext`h12 \
+(1 - $CellContext`p)) (1 - $CellContext`e/
+               2)) $CellContext`ffww) $CellContext`ffwd) $CellContext`xww) \
+$CellContext`xwd[$CellContext`xww, $CellContext`xdd] + (((((($CellContext`h12 \
+(1 - $CellContext`d)) (1 - $CellContext`e/2)) (
+               1 - $CellContext`p)) $CellContext`ffww) $CellContext`ffwd) \
+$CellContext`xww) $CellContext`xwd[$CellContext`xww, $CellContext`xdd] + \
+((((($CellContext`h22 (1 - $CellContext`d)) (
+                1 - $CellContext`p)^2) $CellContext`ffwd) $CellContext`ffwd) \
+$CellContext`xwd[$CellContext`xww, $CellContext`xdd]) \
 $CellContext`xwd[$CellContext`xww, $CellContext`xdd]; $CellContext`fdd[
           Pattern[$CellContext`xww, 
            Blank[]], 
@@ -1068,12 +1065,12 @@ $CellContext`xwd[$CellContext`xww, $CellContext`xdd]; $CellContext`fdd[
            Blank[]], 
           Pattern[$CellContext`h33, 
            
-           Blank[]]] := $CellContext`\[Nu] ($CellContext`h33 \
-$CellContext`ffdd $CellContext`ffdd $CellContext`xdd $CellContext`xdd + 
-          2 $CellContext`h23 $CellContext`p $CellContext`ffdd \
-$CellContext`ffwd $CellContext`xdd $CellContext`xwd[$CellContext`xww, \
-$CellContext`xdd] + $CellContext`h22 $CellContext`p^2 $CellContext`ffwd \
-$CellContext`ffwd $CellContext`xwd[$CellContext`xww, $CellContext`xdd] \
+           Blank[]]] := $CellContext`\[Nu] (((($CellContext`h33 \
+$CellContext`ffdd) $CellContext`ffdd) $CellContext`xdd) $CellContext`xdd + \
+(((((2 $CellContext`h23) $CellContext`p) $CellContext`ffdd) \
+$CellContext`ffwd) $CellContext`xdd) $CellContext`xwd[$CellContext`xww, \
+$CellContext`xdd] + (((($CellContext`h22 $CellContext`p^2) $CellContext`ffwd) \
+$CellContext`ffwd) $CellContext`xwd[$CellContext`xww, $CellContext`xdd]) \
 $CellContext`xwd[$CellContext`xww, $CellContext`xdd]); $CellContext`fwd[
           Pattern[$CellContext`xww, 
            Blank[]], 
@@ -1100,19 +1097,20 @@ $CellContext`xwd[$CellContext`xww, $CellContext`xdd]); $CellContext`fwd[
           Pattern[$CellContext`h22, 
            Blank[]], 
           Pattern[$CellContext`h23, 
-           Blank[]]] := $CellContext`\[Omega] (
-          2 $CellContext`h22 $CellContext`p (
-            1 - $CellContext`p) $CellContext`ffwd $CellContext`ffwd \
-$CellContext`xwd[$CellContext`xww, $CellContext`xdd] \
-$CellContext`xwd[$CellContext`xww, $CellContext`xdd] + 
-          2 $CellContext`h23 (
-            1 - $CellContext`p) $CellContext`ffdd $CellContext`ffwd \
-$CellContext`xdd $CellContext`xwd[$CellContext`xww, $CellContext`xdd] + 
-          2 $CellContext`h12 (1 - $CellContext`e/2) (1 - $CellContext`g/
-            2) $CellContext`p $CellContext`ffww $CellContext`ffwd \
-$CellContext`xww $CellContext`xwd[$CellContext`xww, $CellContext`xdd] + \
-$CellContext`h13 ((2 - $CellContext`e) ((2 - $CellContext`g)/
-             2)) $CellContext`ffdd $CellContext`ffww $CellContext`xdd \
+           
+           Blank[]]] := $CellContext`\[Omega] (((((((
+                 2 $CellContext`h22) $CellContext`p) (
+                1 - $CellContext`p)) $CellContext`ffwd) $CellContext`ffwd) \
+$CellContext`xwd[$CellContext`xww, $CellContext`xdd]) \
+$CellContext`xwd[$CellContext`xww, $CellContext`xdd] + (((((
+                2 $CellContext`h23) (
+                1 - $CellContext`p)) $CellContext`ffdd) $CellContext`ffwd) \
+$CellContext`xdd) $CellContext`xwd[$CellContext`xww, $CellContext`xdd] + \
+(((((((2 $CellContext`h12) (1 - $CellContext`e/2)) (1 - $CellContext`g/
+                 2)) $CellContext`p) $CellContext`ffww) $CellContext`ffwd) \
+$CellContext`xww) $CellContext`xwd[$CellContext`xww, $CellContext`xdd] + \
+(((($CellContext`h13 ((2 - $CellContext`e) ((2 - $CellContext`g)/
+                 2))) $CellContext`ffdd) $CellContext`ffww) $CellContext`xdd) \
 $CellContext`xww); $CellContext`ftot[
           Pattern[$CellContext`xww, 
            Blank[]], 
@@ -1380,8 +1378,8 @@ $CellContext`h22, $CellContext`h23, $CellContext`h33]; $CellContext`\
         Triangle[{{$CellContext`x1, $CellContext`y1}, {$CellContext`x2, \
 $CellContext`y2}, {$CellContext`x3, $CellContext`y3}}]; \
 $CellContext`HWparabola1 = 
-        Plot[Sqrt[3] $CellContext`x (1 - $CellContext`x), {$CellContext`x, 0, 
-           1}, PlotStyle -> Black]; Null}; Typeset`initDone$$ = True),
+        Plot[(Sqrt[3] $CellContext`x) (1 - $CellContext`x), {$CellContext`x, 
+           0, 1}, PlotStyle -> Black]; Null}; Typeset`initDone$$ = True),
     SynchronousInitialization->True,
     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
     UnsavedVariables:>{Typeset`initDone$$},
@@ -1397,12 +1395,13 @@ $CellContext`HWparabola1 =
    3.857557988620178*^9}, {3.857558047205132*^9, 3.857558053657557*^9}, 
    3.857558704004333*^9, {3.857642842747326*^9, 3.857642852594831*^9}, 
    3.857643281193914*^9, {3.857643311516856*^9, 3.857643319503063*^9}, {
-   3.857643362167984*^9, 3.857643363163836*^9}},
- CellLabel->"Out[1]=",ExpressionUUID->"4e176727-1826-4406-8653-c4d757f5a587"]
+   3.857643362167984*^9, 3.857643363163836*^9}, {3.8577471152595377`*^9, 
+   3.8577471298064632`*^9}, {3.8577475655525923`*^9, 3.857747596462762*^9}},
+ CellLabel->"Out[41]=",ExpressionUUID->"7ce91fc5-c238-45f2-abd9-660141213ebc"]
 }, Open  ]]
 },
 WindowSize->{1421, 872},
-WindowMargins->{{Automatic, -150}, {Automatic, 0}},
+WindowMargins->{{Automatic, 170}, {Automatic, 110}},
 FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (December 2, 2021)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"15050a92-8157-4da6-9186-8679995de543"
@@ -1419,8 +1418,8 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 31108, 758, 1652, "Input",ExpressionUUID->"fe78f92a-3b8d-4e60-93d1-acc9fb235b17"],
-Cell[31691, 782, 27229, 618, 779, "Output",ExpressionUUID->"4e176727-1826-4406-8653-c4d757f5a587"]
+Cell[580, 22, 31116, 757, 1652, "Input",ExpressionUUID->"fe78f92a-3b8d-4e60-93d1-acc9fb235b17"],
+Cell[31699, 781, 27362, 618, 559, "Output",ExpressionUUID->"7ce91fc5-c238-45f2-abd9-660141213ebc"]
 }, Open  ]]
 }
 ]
