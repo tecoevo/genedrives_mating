@@ -1,4 +1,5 @@
-% The code "mat_sys_fun_rel.m" generates the figure B1 of the manuscript.
+% Both the code "FigB1.nb", "mat_sys_fun_rel.m" generates the figure B1 of the manuscript.
+% For the purpose of the manuscript, code FigB1.nb was used.
 
 % Figure B1: Effect on the rate of production of DD genotype with increases
 % in degree of polygamy for different fitness cost. 
