@@ -1,1 +1,0 @@
-The matlab code 'mating_sys_time.m' generates the plots as shown in figure panel 4. To run the 'mating_sys_time.m' following functions are required: 'ode4.m', 'linspecer.m', 'fun_mating_gen_r.m'
