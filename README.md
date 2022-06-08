@@ -3,7 +3,7 @@
 
 ## Overview ##
 
-This repository contains and all of the code and data required to reproduce the figures presented in: *On the effect of mating complexity on gene drive dynamics*.
+This repository contains and all of the code and data required to reproduce the figures presented in: *The effect of mating complexity on gene drive dynamics*.
 
 All the final figures are also included in the repository. The code included comes in two types:
 
