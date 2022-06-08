@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/390775289.svg)](https://zenodo.org/badge/latestdoi/390775289)
+
 ### This code is associated with the paper "The effect of mating complexity on gene drive dynamics".
 
 
